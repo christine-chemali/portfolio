@@ -1,0 +1,168 @@
+/*PORTFOLIO CSS*/
+/**************** General ****************/
+:root {
+    --main-bg-color: #C2C0C4;
+    --card-bg-color: #FAFBFC;
+    --main-text-color: #161925;
+    --nav-bg-color: #C2C0C4 ;
+    --contrast-text-color: #FAFBFC;
+    --link-text-color: #2D32B1;
+    --link-text-hover-color: #21258D;
+    --hover-icon-color: #ACADC9;
+    --font-title-bold: "CabinBold";
+    --font-title-regular: "CabinRegular";
+    --font-text-regular: "CourierPrime";
+  }
+/*fonts*/
+@font-face {
+    font-family: "CabinBold";
+    src: url('./Media/fonts/CabinCondensed-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "CabinRegular";
+    src: url('./Media/fonts/CabinCondensed-Regular.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "CourierPrime";
+    src: url('./Media/fonts/CourierPrime-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*page structure*/
+body {
+    margin: 0px;
+    background-color:var(--main-bg-color);
+    }
+.page {
+    padding-right: 11.5%;
+    padding-left: 10%;
+    background:var(--main-bg-color);
+    padding-bottom: 0.2%;
+    padding-top: 5%;
+}
+/********************************** MENU******************************/
+
+/*** Nav Bar ******/
+/*fixed position*/
+.headermenu {
+    background-color:var(--nav-bg-color);
+    position: fixed;
+    top: 0;
+    width: 78.5%;
+}
+.navlist {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: var(--nav-bg-color);
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0px;
+    font-size: 2rem;
+}   
+li {
+    float: left;
+} 
+.link {
+    display: block;
+    color:var(--link-text-color);
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-family: var(--font-title-bold);
+}
+li a:hover {
+    color: var(--link-text-hover-color);
+}
+
+/*Hamburger menu*/
+.menu {
+    display: none;
+  }
+#hamburgermenu {
+    display: none;
+}
+/*Media Querries hamburger menu*/
+@media only screen and (max-width: 1297px){
+    .navbar {
+        position: relative;
+        display: inline-block;
+    }
+    .hamburgermenu {
+        display: none; 
+    }
+    .menu {
+        cursor: pointer;
+        font-size: 2rem;
+        display: block;
+        color:var(--link-text-color);
+        font-family: var(--font-title-bold);
+        margin-left: 15px;
+    }
+    .menu:hover{
+        color: var(--link-text-hover-color);
+    }
+    .navlist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none; 
+        position: absolute;
+        top: 40px; 
+        left: 0;
+        z-index: 1;
+    }
+    .hamburgermenu:checked + .menu + .navlist {
+        display: flex;
+        flex-direction: column;
+    }
+    .navlist li {
+        text-align: left; 
+    }
+    .navlist li a {
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        text-align: left;
+        margin-left: 15px;
+        font-size: 2rem;
+        border: 5px solid;   
+    }
+    .headermenu {
+        padding-top: 10px;
+        width: 100%;
+        left: 0;
+    }
+}
+/****************************** Main *************************/
+.mainpage  {
+    background: var(--main-bg-color);
+    padding: 4%;
+    padding-bottom: 0px;
+}
+/**************************** footer **********************/
+.socialmedia {
+    text-align: center;
+    font-family: var(--font-title-bold);
+    color: var(--link-text-color);
+}
+.icon:hover {
+    background-color: var(--hover-icon-color);
+    border-radius: 5px;
+}
+.allrights {
+    text-align: center;
+    font-family: var(--font-text-regular);
+    color: var(--main-text-color);
+    padding: 10px;
+    margin: 0px;
+    font-size: 0.8rem;
+}
+.icon {
+    width: 50px;
+}
+  
