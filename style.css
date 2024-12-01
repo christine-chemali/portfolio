@@ -8,6 +8,8 @@
     --contrast-text-color: #FAFBFC;
     --link-text-color: #2D32B1;
     --link-text-hover-color: #21258D;
+    --link-text-visited: #2D32B1;
+    --link-text-active: red;
     --hover-icon-color: #ACADC9;
     --hover-text-color: #acadc996;
     --font-title-bold: "CabinBold";
@@ -92,15 +94,16 @@ li {
 html {    
     scroll-padding-top: 100px;
 }
-.mainpage  {
+.mainpage, .pagepart  {
     background: var(--main-bg-color);
-    padding-top: 20px;
-    padding-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-left: 15px;
     padding-right: 15px;
+}
+.mainpage {
+    padding-top: 20px;
 }
 .card {
     background: var(--card-bg-color);
@@ -139,10 +142,34 @@ html {
     padding: 2px;
     margin: 3px;
 }
-.project:hover{
+a {
+    text-decoration:none;
+}
+.linkproject:visited{
+    color:var(--link-text-visited);
+}
+.project:hover {
     color: var(--link-text-hover-color);
     background-color: var(--hover-text-color);
     border-radius: 5px;
+    padding: 2px;
+    margin: 3px;
+}
+.project:active, .linkproject:active  {
+    color: var(--link-text-active);
+}
+.projectlanguage {
+    font-family: var(--font-title-regular);
+    color: var(--main-text-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.subtitle {
+    font-family: var(--font-title-bold);
+    color: var(--link-text-color);
+    font-size: 2.5rem;
+    margin: 0px;
+    line-height: 2.2rem;
 }
 /**************************** footer **********************/
 .socialmedia {
@@ -225,7 +252,6 @@ html {
     width: auto;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 10px;
 }
 .mainpage{
     flex-wrap: wrap;
@@ -233,6 +259,9 @@ html {
 .socialmedia {
     width: fit-content;
     margin: auto;
+}
+.headermenu {
+    padding-top: 0px;
 }
 }
 @media only screen and (min-width:410px) and (max-width: 980px){
@@ -256,8 +285,8 @@ html {
 @media only screen and (min-width: 800px){
     .mainpage {
         margin-top: 10px;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 15px;
+        padding-right: 15px;
         }
     #portfolio {
         max-width: 60%;
