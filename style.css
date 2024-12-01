@@ -141,8 +141,18 @@ html {
     font-family: var(--font-text-regular);
     color: var(--main-text-color);
 }
-.language {
+.list {
+    font-family: var(--font-text-regular);
+    color: var(--main-text-color);
+    margin: 20px;  
+}
+.language, .listtext {
     list-style-type: upper-roman;
+}
+.listtext {
+    margin: 10px;
+    font-family: var(--font-text-regular);
+    color: var(--main-text-color);
 }
 .project {
     list-style-position: inside;

@@ -157,6 +157,37 @@
                     </p>
                 </section>
             </div>
+            <div class="pagepart">
+                <section id="pythonproject1" class="card">
+                    <h3 class="subtitle">Error Handling</h3>
+                    <p class="text">Error handling is a crucial aspect of the Tic Tac Toe game, 
+                        ensuring a smooth user experience and preventing crashes due to invalid input.
+                         The game includes several mechanisms to manage potential errors:
+                    </p>
+                    <ul class="listtext">
+                        <li class="listtext"><strong>Input Validation: </strong>The player_move function incorporates robust input validation. 
+                            It checks that the player's input consists of exactly two characters and that both characters are numeric. 
+                            If the input is not valid, the function provides informative feedback, prompting the player to try again 
+                            with the correct format.
+                        </li>
+                        <li class="listtext"><strong>Range Checking: </strong>
+                            After confirming that the input is numeric, the function checks if the entered row and column numbers 
+                            are within the valid range (0 to 2). If the numbers are outside this range, the player is informed, and 
+                            they are asked to enter valid coordinates.
+                        </li>
+                        <li class="listtext"><strong>Occupied Cell Handling: </strong>
+                            During gameplay, if a player attempts to occupy a cell that is already filled, 
+                            the game checks the board state and notifies the player that the selected square is not available. 
+                            This prevents invalid moves and ensures that the game remains fair and enjoyable.
+                        </li>
+                    </ul>                  
+                    <p class="text">These error handling mechanisms contribute to a user-friendly experience, 
+                        allowing players to focus on the game without being frustrated by unexpected issues. 
+                        By providing clear instructions and feedback, the game enhances player engagement and 
+                        enjoyment.
+                    </p>
+                </section>
+            </div>
         </div>
         <!-- footer --> 
         <footer class="footer">
