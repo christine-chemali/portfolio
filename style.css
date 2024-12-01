@@ -94,7 +94,7 @@ li {
 html {    
     scroll-padding-top: 100px;
 }
-.mainpage, .pagepart  {
+.mainpage, .pagepart, .pagepart4  {
     background: var(--main-bg-color);
     display: flex;
     flex-direction: row;
@@ -105,11 +105,14 @@ html {
 .mainpage {
     padding-top: 20px;
 }
-.card {
+.card, .screenshotcard {
     background: var(--card-bg-color);
     padding: 10px;
     border-right: 5px solid var(--link-text-color);
     border-bottom: 10px solid var(--link-text-color);
+}
+.screenshotcard {
+    min-width: 47%;
 }
 .title {
     font-family: var(--font-title-bold);
@@ -119,11 +122,17 @@ html {
     line-height: 8rem;
     color: var(--link-text-color);
 }
-.pic {
+.pic, .pic1 {
     font-family: var(--font-text-regular);
     color: var(--main-text-color);
     font-size: 0.8rem;
 }
+.pic1 { 
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
 .text {
     font-family: var(--font-text-regular);
     color: var(--main-text-color);
@@ -170,6 +179,13 @@ a {
     font-size: 2.5rem;
     margin: 0px;
     line-height: 2.2rem;
+}
+.subsubtitle {
+    font-family: var(--font-title-regular);
+    color: var(--link-text-color);
+    font-size: 2rem;
+    margin-top: 20px;
+  margin-bottom: 10px;
 }
 /**************************** footer **********************/
 .socialmedia {
@@ -248,12 +264,12 @@ a {
 }
 /*media main*/
 @media only screen and (max-width: 800px){
-.card {
+.card, .screenshotcard {
     width: auto;
     margin-right: auto;
     margin-left: auto;
 }
-.mainpage{
+.mainpage, .pagepart4 {
     flex-wrap: wrap;
 }
 .socialmedia {
@@ -262,6 +278,9 @@ a {
 }
 .headermenu {
     padding-top: 0px;
+}
+.pagepart4{
+    flex-direction: column;
 }
 }
 @media only screen and (min-width:410px) and (max-width: 980px){
@@ -292,3 +311,4 @@ a {
         max-width: 60%;
     }          
 }
+    

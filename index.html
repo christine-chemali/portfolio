@@ -85,6 +85,76 @@
                         The bot uses a simple strategy to make its moves, checking for winning opportunities and blocking the player's 
                         moves when necessary. This mode allows players to practice their skills against a computer opponent.
                     </p>
+                    <h3 class="subtitle">Code Breakdown</h3>
+                    <p class="text">The Tic Tac Toe implementation in Python consists of several key functions, each responsible for a 
+                        specific part of the game's functionality.<br> 
+                        To further illustrate the key components of the Tic Tac Toe code, I have included several screenshots highlighting
+                         important sections and their functions. Each screenshot is accompanied by an explanation to clarify its role within the overall implementation.<br>
+                         Below is an overview of the main components of the code:<br><br>   
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart4">
+                <section class="screenshotcard">
+                    <img class="pic1" src="./Media/pictures/tictactoe-create-the-board-function-black.png" alt="screenshot of the show_board function to highlight and illustrate the text below">
+                    <h4 class="subsubtitle">Creating the Board</h4>
+                    <p class="text">The show_board function is responsible for displaying the current state of the game 
+                        board to the players. It prints the grid layout, including the numbers representing each cell, 
+                        and updates the display after each move.<br> 
+                        This function enhances the user experience by providing a clear visual representation of the game.
+                        <br>
+                    </p>
+                </section>
+                <section class="screenshotcard">
+                    <img class="pic1" src="./Media/pictures/tictactoe-check-for-victory-black.png" alt="screenshot of the check for victory function to highlight and illustrate the text below">
+                    <h4 class="subsubtitle">Check for Victory</h4>
+                    <p class="text">The victory function checks if a player has won the game. 
+                        It evaluates all possible winning combinations: three rows, three columns, and two diagonals. 
+                        If any of these combinations contain the same player's symbol, the function returns True, 
+                        indicating a win.<br>
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart4">
+                <section class="screenshotcard">
+                    <img class="pic1" src="./Media/pictures/tictactoe-board-full-function.png" alt="screenshot of the board full function to highlight and illustrate the text below">
+                    <h4 class="subsubtitle">Checking if the Board is Full</h4>
+                    <p class="text">The board_full function determines whether the game board is completely filled. 
+                        It iterates through all cells in the grid and checks for empty spaces. 
+                        If there are no empty cells left, the function returns True, indicating a draw.
+                        <br>
+                    </p>
+                </section>
+                <section class="screenshotcard">
+                    <img class="pic1" src="./Media/pictures/tictactoe-player-move-function.png" alt="screenshot of the player move function to highlight and illustrate the text below">
+                    <h4 class="subsubtitle">Player Move Logic</h4>
+                    <p class="text">The player_move function handles user input for player moves. 
+                        It prompts the player to enter their move in the format of row and column numbers. 
+                        The function includes validation to ensure that the input is valid, checking for correct 
+                        lengths and ranges, and returns the coordinates of the move.<br>
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart4">
+                <section class="screenshotcard">
+                    <img class="pic1" src="./Media/pictures/tictactoe-bot-move-function.png" alt="screenshot of the bot move function to highlight and illustrate the text below">
+                    <h4 class="subsubtitle">Bot Logic</h4>
+                    <p class="text">The bot_move function implements the bot's strategy for making moves. 
+                        The bot first checks if the center cell is available; if so, it occupies that space. 
+                        Then, it evaluates the board for any winning opportunities or potential blocks against the human player. 
+                        If neither condition is met, the bot chooses the first available cell, ensuring the game continues smoothly.
+                        <br>
+                    </p>
+                </section>
+                <section class="screenshotcard">
+                    <img class="pic1" src="./Media/pictures/tictactoe-game-play-function-part1.png" alt="screenshot of the game play function part 1 to highlight and illustrate the text below">
+                    <img class="pic1" src="./Media/pictures/tictactoe-game-play-function-part2.png" alt="screenshot of the game play function part 2 to highlight and illustrate the text below">
+                    <h4 class="subsubtitle">Game Loop</h4>
+                    <p class="text">The game_tic_tac_toe function orchestrates the flow of the game. 
+                        It initializes the game by asking players to choose their mode (against another player or the bot) 
+                        and sets up the board. The function contains the main game loop, which alternates turns between players, 
+                        checks for victory or a full board, and updates the game state accordingly.<br>
+                    </p>
                 </section>
             </div>
         </div>
