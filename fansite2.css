@@ -69,6 +69,7 @@ body {
     width: 78.5%;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    z-index: 9999;
 }
 .navlist {
     list-style-type: none;
@@ -211,12 +212,9 @@ li a:hover {
     background-image: url(./Media2/Video2/jinxenfantadulte.gif);
     background-repeat: no-repeat;
     animation: flicker 1.5s infinite alternate;
-
 }
-@keyframes flicker {
-    
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-  
+@keyframes flicker {    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {  
         text-shadow:
         0 0 4px #fd91d7,
         0 0 11px #fd91d7,
@@ -226,8 +224,7 @@ li a:hover {
         0 0 90px rgb(234, 0, 255),
         0 0 100px rgb(255, 0, 255),
         0 0 150px rgb(255, 0, 217);
-    }
-    
+    }   
     20%, 24%, 55% {        
         text-shadow: none;
     }    

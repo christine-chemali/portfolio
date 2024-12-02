@@ -52,7 +52,8 @@ body {
     background-color:var(--nav-bg-color);
     position: fixed;
     top: 0;
-    width: -moz-available;
+    width: 100%;
+    z-index: 9999;
 }
 .navlist {
     list-style-type: none;
