@@ -184,6 +184,9 @@ li a:hover {
     .headermenu {
         padding-bottom: 6px;
     }
+    .page {
+        padding-top:0px;
+    }
 }
 /****************************** Main *************************/
 /* Site title and description */
