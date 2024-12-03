@@ -376,38 +376,3 @@ a {
         max-width: 60%;
     }          
 }
-@media only screen and (min-width: 450px) {
-.page {
-padding-right: 0px; 
-padding-left: 0%; 
-}
-.headermenu {
-/* border-bottom-right-radius: 0px; */
-/* border-bottom-left-radius: 0px; */
-width: 100%;
-}
-.fansitefooter {
-/* border-radius: 0px; */
-width: 100%;
-}
-.page2 {
-padding-right: 0px; 
-padding-left: 0px; 
-}
-.footer {
-    margin-right: 0px; 
-margin-left: 0px; 
-}
-.navlist {
-margin-top: 0px;
-margin-bottom: 7px;
-}
-.link {
-padding: 20px 16px;
-}
-.searchbar {
-margin-bottom: 0px; 
-margin-top: 12px;
-}   
-}
-    
