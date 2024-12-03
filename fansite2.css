@@ -205,7 +205,7 @@ li a:hover {
     font-family: "Graffiti";
     color: #fb3eb9;
     font-size: 7rem;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
     margin-bottom: 25px;
     letter-spacing: 0.4rem;
@@ -1108,4 +1108,41 @@ font-size: 1.2rem;
         padding-top: 40px;
     }
 }
-
+@media only screen and (max-width: 450px){
+    .page {
+        padding-right: 0px; 
+        padding-left: 0%; 
+      }
+      
+      .headermenu {
+        /* border-bottom-right-radius: 0px; */
+        /* border-bottom-left-radius: 0px; */
+        width: 100%;
+      }
+      
+      .fansitefooter {
+        /* border-radius: 0px; */
+        width: 100%;
+      }
+      .page2 {
+        padding-right: 0px; 
+        padding-left: 0px; 
+      }
+      .footer {
+         margin-right: 0px; 
+        margin-left: 0px; 
+      }
+      
+      .navlist {
+        margin-top: 0px;
+        margin-bottom: 7px;
+      }
+      .link {
+        padding: 20px 16px;
+      }
+      .searchbar {
+        margin-bottom: 0px; 
+        margin-top: 12px;
+      }
+      
+}
