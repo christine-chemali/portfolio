@@ -29,10 +29,10 @@
                                 <li><a href="#pythonproject1" class="link">PYTHON</a></li>
                                 <li><a href="#HtmlCssproject1" class="link">HTML/CSS</a></li>
                                 <li><a href="#contact" class="link">CONTACT</a></li>
-                                <div class="languagelinks">
+                                <ul class="languagelinks">
                                     <li><a href="index.html" class="lang">EN</a></li>
                                     <li><a href="indexfr.html" class="lang">FR</a></li>
-                                </div>
+                                </ul>
                             </ul>
                 </nav>
             </header>
@@ -509,55 +509,16 @@ game_tic_tac_toe()
                     <p class="text">The Jinx Fansite is designed with several key features that not only enhance user experience 
                         but also showcase my coding skills and design choices. My specific focus was on creating an engaging layout 
                         and informative content for the fansite2.html page, which includes the following components:<br>
-                        <br>
-                        <strong>News Section:</strong> I implemented a dynamic news section utilizing div containers to organize updates 
-                        related to Jinx, including game updates, new skins, and appearances in the Arcane series. 
-                        By using CSS Flexbox for layout, I ensured that the news items are responsive and visually appealing, 
-                        keeping fans engaged with the latest announcements at their fingertips.
-                        <br><br>
-                        <strong>Achievements:</strong> This section highlights Jinx's accomplishments within the game and her cultural 
-                        impact. I utilized lists (ul and li) to present her various in-game accolades clearly. 
-                        This not only enhances readability but also allows visitors to appreciate her character in a structured manner.
-                        <br><br>
-                        <strong>Events:</strong> I included details about past and upcoming events related to Jinx, using section tags to separate content areas. 
-                        This feature encourages fan participation and engagement by providing clear information about community 
-                        events and game launches.
-                        <br><br>
-                        <strong>Goodies:</strong> The goodies section features a selection of merchandise related to 
-                        Jinx, presented through a visually engaging layout. I utilized CSS Flexbox to create a 
-                        responsive grid display of product images, ensuring that fans can easily browse through the 
-                        items. Each product is linked with descriptive buttons, crafted using form and input elements, allowing users to make purchases with ease. 
-                        This section not only enhances the fan experience by providing access to unique merchandise but also reflects 
-                        my ability to design functional and appealing e-commerce elements.
-                        <br><br>
-                        <strong>Media Gallery:</strong> A significant aspect of my contribution was the curation of a media gallery 
-                        that showcases stunning images and videos of Jinx in action. 
-                        I employed a grid layout using CSS to ensure that the media is displayed in an organized and visually appealing 
-                        manner. This enhances the immersive experience for fans, allowing them to interact with Jinx's character through 
-                        multimedia.
-                        <br><br>
-                        <strong>Links to Social Media and Other Fan Sites:</strong> I integrated links to Jinx's official social media profiles using a tags, 
-                        encouraging fans to connect and follow her on various platforms. 
-                        This not only fosters a sense of community but also directs traffic to related fan sites, 
-                        expanding the network of Jinx enthusiasts.
-                        <br><br>
-                        <strong>Contact Form:</strong> I designed a user-friendly contact form using form elements, allowing fans to 
-                        reach out with inquiries or feedback. This feature is crucial for fostering communication and building a sense 
-                        of community among fans. By utilizing form validation and accessible labels, I ensured that the form is user-friendly.
-                        <br><br>
-                        In summary, the design and coding techniques employed in the Jinx Fansite are purpose-driven, enhancing user 
-                        experience, engagement, and accessibility. Each feature was carefully crafted to serve the needs of the fans 
-                        while showcasing my skills in HTML, CSS, and responsive design.
                     </p>
                 </section>
             </div>
             <div class="pagepart4">
                 <div class="screenshotcard">
-                    <video class="vid" controls loop autoplay muted>
+<!--                     <video class="vid" controls loop autoplay muted>
                         <source src="./Media/Videos/live-fansite-title.mp4" type="video/mp4">
                         Your browser does not support this video format.
-                    </video>
-                    <span class="text"><strong>Live Fansite Screenshot:</strong> The title JINX displayed in an eye-catching style</span>
+                    </video> 
+                    <span class="text"><strong>Live Fansite Screenshot:</strong> The title JINX displayed in an eye-catching style</span> -->
                     <div class="codetext">
                         <pre class="precode">
 <code class="code">
@@ -618,8 +579,8 @@ game_tic_tac_toe()
                     </p>
                 </div>
                 <div class="screenshotcard">
-                    <img class="pic1" src="./Media/pictures/audio-lol-screenshot.png" alt="screenshot of the audio player">
-                    <span class="text"><strong>Live Fansite Screenshot:</strong> The audio allows users to listen to songs associated with Jinx</span>
+<!--                    <img class="pic1" src="./Media/pictures/audio-lol-screenshot.png" alt="screenshot of the audio player">
+                    <span class="text"><strong>Live Fansite Screenshot:</strong> The audio allows users to listen to songs associated with Jinx</span> -->
                     <div class="codetext">
                         <pre class="precode">
 <code class="code">
@@ -630,6 +591,13 @@ game_tic_tac_toe()
         Votre navigateur ne prend pas en charge ce format audio. Voil&agrave; un 
         &lt;a href=&quot;https://www.youtube.com/watch?v=rhTZTy1rZhw&amp;list=PLJP5_qSxMbkJvmDlvP8v_tZ5Lc8Fzginj&amp;index=17&quot;&gt;lien vers l&apos;audio&lt;/a&gt; sur youtube &agrave; la place.
     &lt;/audio&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;saison1&quot;&gt;
+    &lt;video class=&quot;videotrailers1&quot; controls loop autoplay muted&gt;
+        &lt;source src=&quot;./Media2/Video2/Arcane-Saison1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        Votre navigateur ne prend pas en charge ce format de video.
+    &lt;/video&gt;
 &lt;/div&gt;
 </code>
                         </pre>
@@ -649,24 +617,186 @@ game_tic_tac_toe()
     font-size: small;
     padding-bottom: 5px;
 }
+.saison1 {    
+    display: flex;    
+    justify-content: center;    
+    align-items: center;    
+    width: 100%;
+    background: black;
+    padding-bottom: 15px;
+}
+.videotrailers1 {    
+    margin: auto;
+    display: block;
+    width: 80%;
+    border-radius: 5px;
+}
     </code>
                             </pre>
                             <span class="text"><strong>CSS Styling:</strong> This part uses Flexbox to align elements smoothly</span>
                         </div>
                     </div>
-                    <h4 class="subsubtitle">Audio Section:</h4>
-                    <p class="text">Adding audio to the Jinx Fansite significantly enhances user experience by allowing fans to connect with Jinx through music. 
-                        By integrating an audio player, structured with HTML and styled using CSS Flexbox for a smooth layout, 
-                        users can easily listen to songs like "Blood Sweat & Tears" by Sheryl Lee Ralph. 
-                        The code provides playback controls and ensures the section is visually appealing with a 
-                        sleek black background.<br>
-                        This interactive feature fosters an emotional connection, as music evokes feelings that resonate with Jinx's 
-                        character. The ability for users to play and pause the audio encourages engagement, 
-                        prompting them to spend more time exploring the site. Overall, the audio enriches the atmosphere 
-                        and caters to diverse user preferences, making the site more inviting and dynamic for all fans of Jinx.<br>
+                    <h4 class="subsubtitle">Audio & Video:</h4>
+                    <p class="text">Integrating audio and video into the Jinx Fansite significantly enhances user experience by 
+                        allowing fans to connect with Jinx through music and dynamic visuals. With an embedded audio player for 
+                        songs like "Blood Sweat & Tears" by Sheryl Lee Ralph and video clips showcasing her adventures in the 
+                        Arcane series, users can easily engage with the content. Playback controls for both audio and video 
+                        ensure an interactive experience, fostering an emotional connection that resonates with Jinx's vibrant 
+                        personality. This engaging combination encourages longer visits and promotes a sense of community among 
+                        fans.<br>
+                        Overall, the integration enriches the atmosphere, making the site more inviting and dynamic 
+                        for all Jinx enthusiasts.
                     </p>
                 </div>
             </div>
+            <div class="pagepart4">
+                <div class="screenshotcard">
+<!--                   <img class="pic1" src="./Media/pictures/newsletter.png" alt="screenshot of the newsletter full screen desktop view, medium screen tablet view,  small screen telephone view">
+                    <span class="text"><strong>Live Fansite Screenshot:</strong> The newsletter form in full screen desktop view, medium screen tablet view and small screen telephone view</span> --> 
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+    &lt;form class=&quot;newsletterblock&quot; action=&quot;action_page.php&quot;&gt;
+    &lt;section class=&quot;newslettertitle&quot;&gt;
+        &lt;h2 class=&quot;newsletterjinx&quot;&gt;Si t&apos;es Jinx&lt;br&gt;Abonne toi&lt;br&gt;aux News&lt;/h2&gt;
+    &lt;/section&gt;
+    &lt;div class=&quot;newsletterform&quot;&gt;
+        &lt;label class=&quot;labelnews&quot; for=&quot;prenom&quot;&gt;Pr&eacute;nom&lt;/label&gt;&lt;br&gt;
+        &lt;input type=&quot;text&quot; id=&quot;prenom&quot; class=&quot;inputnews&quot; placeholder=&quot; Ton pr&eacute;nom&quot; name=&quot;prenom&quot; aria-label=&quot;prenom&quot; required&gt;
+        &lt;br&gt;
+        &lt;label class=&quot;labelnews&quot; for=&quot;E-mail&quot;&gt;E-mail&lt;/label&gt;&lt;br&gt;
+        &lt;input type=&quot;text&quot; id=&quot;E-mail&quot; class=&quot;inputnews&quot; placeholder=&quot; Ton e-mail&quot; name=&quot;E-mail&quot; aria-label=&quot;E-mail&quot; required&gt;
+        &lt;br&gt;
+        
+    &lt;/div&gt;
+    &lt;div class=&quot;buttonnews&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;checkbox&quot; class=&quot;checkboxnews&quot; name=&quot;checkbox&quot; aria-label=&quot;case a cocher&quot; required&gt;
+        &lt;label class=&quot;labelcheck&quot; for=&quot;checkbox&quot;&gt;J&apos;ai lu et j&apos;accepte la&lt;br&gt;&lt;a href=&quot;https://jinx/politiquedeconfidentialit&eacute;.com&quot; &gt;politique de confidentialit&eacute;&lt;/a&gt;&lt;/label&gt;
+       &lt;br&gt;
+        &lt;button class=&quot;buttonabo&quot; aria-label=&quot;je m&apos;abonne&quot; type=&quot;submit&quot;&gt;Je m&apos;abonne&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code>
+                        </pre>
+                        <span class="text"><strong>HTML Structure:</strong> The newsletter form, label, input, checkbox, button tags</span>
+                            <pre class="precode">
+<code class="code">
+.newsletterblock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: black;
+    color: #fb3eb9;
+    font-family: &quot;Quicksandbold&quot;;
+    padding: 10px;
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+}
+</code>
+                            </pre>
+                            <span class="text"><strong>CSS Styling:</strong> flexbox in action</span>
+                    </div>                  
+                    <h4 class="subsubtitle">Newsletter Subscription:</h4>
+                    <p class="text">I implemented a dynamic newsletter subscription form designed to keep fans updated about Jinx, 
+                        including game updates, new skins, and appearances in the Arcane series. By utilizing HTML form elements and 
+                        styling it with CSS Flexbox, I ensured that the subscription form is user-friendly and visually appealing. 
+                        <br>
+                    </p>
+                </div>
+                <div class="screenshotcard">
+<!--                <img class="pic1" src="./Media/pictures/goodies-monkey.png" alt="screenshot of Jinx mechanical monkey and the button to buy it">
+                    <span class="text"><strong>Live Fansite Screenshot:</strong>Jinx mechanical monkey </span> -->
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+&lt;div class=&quot;goodmerch&quot;&gt;
+    &lt;div class=&quot;merch&quot;&gt;
+        &lt;section class=&quot;text2&quot;&gt;
+            &lt;h3 class=&quot;Riotgame&quot;&gt;Notre S&eacute;lection :&lt;/h3&gt;
+            &lt;p&gt;
+            Nous avons s&eacute;lectionn&eacute; sept articles incontournables pour 
+            tous les fans ! ...
+            &lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section&quot;&gt;
+        &lt;div class=&quot;character3&quot;&gt;
+            &lt;div class=&quot;pic&quot;&gt;
+                &lt;img class=&quot;goodiespic&quot; src=&quot;./Media2/Pictures2/singe-mecanique.png&quot;  alt=&quot;acheter le singe m&eacute;canique de jinx&quot;&gt;
+            &lt;/div&gt;
+            &lt;form class=&quot;underunicorn&quot; action=&quot;https://merch.riotgames.com/fr-fr/product/arcane-powder-s-wind-up-monkey/&quot; rel=&quot;noopener noreferrer&quot;&gt;
+                &lt;span class=&quot;avatar&quot;&gt; Singe m&eacute;canique de Powder x Arcane &lt;/span&gt;
+                &lt;input class=&quot;buttonsubmit&quot; aria-label=&quot;Mon coup de foudre&quot; type=&quot;submit&quot; value=&quot;MON COUP DE FOUDRE&quot; rel=&quot;noopener noreferrer&quot;&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code>
+                        </pre>
+                        <span class="text"><strong>HTML Structure:</strong> The goodies with div and form tags</span>
+                        <div class="codetext">
+                            <pre class="precode">
+<code class="code">
+.goodmerch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    background-image: url(./Media2/Video2/JinxWildrift.gif);
+    background-size: contain;
+}
+.section {
+    width: 31%;
+    margin: 5px;
+    padding: 5px;
+}
+@media only screen and (min-width: 942px) and (max-width: 1207px){
+    .section {
+        width: 47%;
+    }
+}
+@media only screen and (min-width: 896px) and (max-width: 941px) {
+    .section {
+        width: 46%;
+    }
+}
+@media only screen and (max-width: 895px) {
+    .section {
+        width: auto;
+   }
+}
+</code>
+                            </pre>
+                            <span class="text"><strong>CSS Styling:</strong> This part uses Flexbox </span>
+                        </div>
+                    </div>
+                    <h4 class="subsubtitle">Goodies: </h4>
+                    <p class="text">The goodies section features a selection of merchandise related to 
+                        Jinx, presented through a visually engaging layout. I utilized CSS Flexbox to create a 
+                        responsive grid display of product images, ensuring that fans can easily browse through the 
+                        items. Each product is linked with descriptive buttons, crafted using form and input elements, allowing users to make purchases with ease. 
+                        This section not only enhances the fan experience by providing access to unique merchandise but also reflects 
+                        my ability to design functional and appealing e-commerce elements.
+                    </p>
+                </div>
+            </div>
+<!--                    <br>
+                        <strong>Media Gallery:</strong> A significant aspect of my contribution was the curation of a media gallery 
+                        that showcases stunning images and videos of Jinx in action. 
+                        I employed a grid layout using CSS to ensure that the media is displayed in an organized and visually appealing 
+                        manner. This enhances the immersive experience for fans, allowing them to interact with Jinx's character through 
+                        multimedia.
+                        <br><br>
+                        <strong>Links to Social Media and Other Fan Sites:</strong> I integrated links to Jinx's official social media profiles using a tags, 
+                        encouraging fans to connect and follow her on various platforms. 
+                        This not only fosters a sense of community but also directs traffic to related fan sites, 
+                        expanding the network of Jinx enthusiasts.
+                        <br><br>
+                        In summary, the design and coding techniques employed in the Jinx Fansite are purpose-driven, enhancing user 
+                        experience, engagement, and accessibility. Each feature was carefully crafted to serve the needs of the fans 
+                        while showcasing my skills in HTML, CSS, and responsive design. -->
             <div id="contact" class="pagepart4">
                 <section class="card">
                     <h2 class="title">SOCIALS</h2>
@@ -677,9 +807,8 @@ game_tic_tac_toe()
                     <br>Let's connect and collaborate!
                     </p>
                     <div class="indextext" >
-                        <ul>
+                        <ul class="sociallinks">
                             <li class="language">Link to my:<a class ="linksocial" href="https://github.com/christine-chemali" target="_blank" aria-label="Link to Christine Chemali's github account ">Github</a></li>
-                            <br><br>
                             <li class="language">Link to my:<a class ="linksocial" href="https://www.linkedin.com/in/christine-chemali-4479b3327/" target="_blank" aria-label="Link to Christine Chemali's linkedin account ">Linkedin</a></li>   
                             <!--    <li><a class="smicon" href="https://drive.google.com/uc?export=download&id=1wPGZQg9afb6L-r1pyQ6yzvo9MEDQj-4h" download="CVChristineChemali.pdf" target="_blank" aria-label="Link to Christine Chemali's resume downloadable file">Download Resume</a></li> -->
                             <!--    <li><a class="smicon" href="#" target="_blank" aria-label="Link to Christine Chemali's online resume">Online Resume</a></li>-->

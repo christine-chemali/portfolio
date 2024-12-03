@@ -71,6 +71,10 @@ body {
     margin-left: auto;   
     display: flex; 
 }*/
+.languagelinks {
+    list-style-type: none;
+    padding-left: 0px;
+}
 .lang {    
     display: block;
     color:var(--link-text-color);
@@ -135,7 +139,7 @@ html {
 }
 .title {
     font-family: var(--font-title-bold);
-    font-size: 10rem;
+    font-size: 9.7rem;
     word-break: break-word;
     margin: 0px;
     line-height: 8rem;
@@ -237,6 +241,12 @@ a {
 }
 .code{
     font-family: var(--font-text-regular);
+}
+.sociallinks {
+    display: inline-grid;
+}
+.language {
+    padding: 5px;
 }
 /**************************** footer **********************/
 .socialmedia {
