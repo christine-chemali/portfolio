@@ -100,8 +100,27 @@
                 </section>
             </div>
             <div class="pagepart4">
-                <section class="screenshotcard">
-                    <img class="pic1" src="./Media/pictures/tictactoe-create-the-board-function-black.png" alt="screenshot of the show_board function to highlight and illustrate the text below">
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+# CREATE THE BOARD
+def show_board(board):
+    print(&quot; &quot;) 
+    print(&quot; &quot; * 13, &quot; TIC TAC TOE &quot;, &quot; &quot; * 13)
+    print(&quot; &quot;)
+    print(&quot;Pour jouer, entrez le num&eacute;ro de la ligne&quot;)
+    print(&quot;et celui de la colonne. Exemple: 00&quot;) 
+    print(&quot; &quot;)  
+    print(&quot; &quot; * 13, &quot; &quot;, &quot;0 &quot;, &quot; 1 &quot;, &quot; 2 &quot;, &quot; &quot; * 13)
+    print(&quot; &quot; * 13, &quot;-&quot; * 13, &quot; &quot; * 13)
+    for index, row in enumerate(board): 
+        print(&quot; &quot; * 11, index, &quot;|&quot;, row[0], &quot;|&quot;, row[1], &quot;|&quot;, row[2], &quot;|&quot;, &quot; &quot; * 13) 
+        print(&quot; &quot; * 13, &quot;-&quot; * 13, &quot; &quot; * 13)
+    print(&quot; &quot;)  
+</code>
+                        </pre>
+                    </div>
                     <h4 class="subsubtitle">Creating the Board</h4>
                     <p class="text">The show_board function is responsible for displaying the current state of the game 
                         board to the players. It prints the grid layout, including the numbers representing each cell, 
@@ -109,40 +128,123 @@
                         This function enhances the user experience by providing a clear visual representation of the game.
                         <br>
                     </p>
-                </section>
-                <section class="screenshotcard">
-                    <img class="pic1" src="./Media/pictures/tictactoe-check-for-victory-black.png" alt="screenshot of the check for victory function to highlight and illustrate the text below">
+                </div>
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+# CHECK FOR VICTORY
+def victory(board, player): 
+    for row in range(3): 
+        if board[row][0] == player and board[row][1] == player and board[row][2] == player: 
+            return True
+    for col in range(3):    
+        if board[0][col] == player and board[1][col] == player and board[2][col] == player:
+            return True 
+    if board[0][0] == player and board[1][1] == player and board[2][2] == player: 
+        return True  
+    if board[0][2] == player and board[1][1] == player and board[2][0] == player: 
+        return True  
+    return False
+</code>
+                        </pre>
+                    </div>
                     <h4 class="subsubtitle">Check for Victory</h4>
                     <p class="text">The victory function checks if a player has won the game. 
                         It evaluates all possible winning combinations: three rows, three columns, and two diagonals. 
                         If any of these combinations contain the same player's symbol, the function returns True, 
                         indicating a win.<br>
                     </p>
-                </section>
+                </div>
             </div>
             <div class="pagepart4">
-                <section class="screenshotcard">
-                    <img class="pic1" src="./Media/pictures/tictactoe-board-full-function.png" alt="screenshot of the board full function to highlight and illustrate the text below">
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+# BOARD FULL
+def board_full(board):
+    for row in board: 
+        for cell in row:
+            if cell == &quot; &quot;: 
+                return False 
+    return True 
+</code>
+                        </pre>
+                    </div>
                     <h4 class="subsubtitle">Checking if the Board is Full</h4>
                     <p class="text">The board_full function determines whether the game board is completely filled. 
                         It iterates through all cells in the grid and checks for empty spaces. 
                         If there are no empty cells left, the function returns True, indicating a draw.
                         <br>
                     </p>
-                </section>
-                <section class="screenshotcard">
-                    <img class="pic1" src="./Media/pictures/tictactoe-player-move-function.png" alt="screenshot of the player move function to highlight and illustrate the text below">
+                </div>
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+# PLAYER MOVE
+def player_move(player_name, board): 
+    while True:
+        move = input(f&quot;{player_name}, entrez votre mouvement (ligne colonne) : &quot;)
+        if len(move) == 2: 
+            try:
+                line = int(move[0]) 
+                column = int(move[1])
+                if 0 &lt;= line &lt;= 2 and 0 &lt;= column &lt;= 2:
+                    if board[line][column] == &apos; &apos;:
+                        return line, column
+                    else:
+                        print(&quot;Cette case est d&eacute;j&agrave; occup&eacute;e. Essayez &agrave; nouveau.&quot;)
+                else:
+                    print(&quot;Veuillez entrer des chiffres entre 0 et 2.&quot;)
+            except ValueError: 
+                print(&quot;Entr&eacute;e invalide. Veuillez entrer deux chiffres.&quot;)
+        else:
+            print(&quot;Entr&eacute;e invalide. Assurez-vous d&apos;entrer exactement deux chiffres.&quot;)
+</code>
+                        </pre>
+                    </div>
                     <h4 class="subsubtitle">Player Move Logic</h4>
                     <p class="text">The player_move function handles user input for player moves. 
                         It prompts the player to enter their move in the format of row and column numbers. 
                         The function includes validation to ensure that the input is valid, checking for correct 
                         lengths and ranges, and returns the coordinates of the move.<br>
                     </p>
-                </section>
+                </div>
             </div>
             <div class="pagepart4">
-                <section class="screenshotcard">
-                    <img class="pic1" src="./Media/pictures/tictactoe-bot-move-function.png" alt="screenshot of the bot move function to highlight and illustrate the text below">
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+# BOT MOVE
+def bot_move(board, bot, human):
+    if board[1][1] == &apos; &apos;:
+        return 1, 1
+    for row in range(3): 
+        for column in range(3):
+            if board[row][column] == &apos; &apos;:
+                board[row][column] = bot
+                if victory(board, bot):
+                    return row, column  
+                board[row][column] = &apos; &apos; 
+    for row in range(3):  
+        for column in range(3):
+            if board[row][column] == &apos; &apos;:
+                board[row][column] = human
+                if victory(board, human):
+                    board[row][column] = &apos; &apos;  
+                    return row, column  
+                board[row][column] = &apos; &apos;  
+    for row in range(3): 
+        for column in range(3):
+            if board[row][column] == &apos; &apos;:
+                return row, column 
+    return -1, -1  
+</code>
+                        </pre>
+                    </div>
                     <h4 class="subsubtitle">Bot Logic</h4>
                     <p class="text">The bot_move function implements the bot's strategy for making moves. 
                         The bot first checks if the center cell is available; if so, it occupies that space. 
@@ -150,17 +252,68 @@
                         If neither condition is met, the bot chooses the first available cell, ensuring the game continues smoothly.
                         <br>
                     </p>
-                </section>
-                <section class="screenshotcard">
-                    <img class="pic1" src="./Media/pictures/tictactoe-game-play-function-part1.png" alt="screenshot of the game play function part 1 to highlight and illustrate the text below">
-                    <img class="pic1" src="./Media/pictures/tictactoe-game-play-function-part2.png" alt="screenshot of the game play function part 2 to highlight and illustrate the text below">
+                </div>
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+# GAME PLAY FUNCTION
+def game_tic_tac_toe(): 
+    print(&quot; &quot;) 
+    print(&quot; &quot; * 13, &quot; TIC TAC TOE &quot;, &quot; &quot; * 13)
+    print(&quot; &quot;)
+    while True:
+        mode = input(&quot;Voulez-vous jouer contre un autre joueur (1) ou contre le bot (2)? Entrez 1 ou 2: &quot;)    
+        if mode == &apos;1&apos;:
+            player1_name = input(&quot;Entrez le nom du joueur 1 : &quot;)
+            player2_name = input(&quot;Entrez le nom du joueur 2 : &quot;)
+            break  
+        if mode == &apos;2&apos;:
+            player1_name = input(&quot;Entrez votre nom : &quot;)
+            player2_name = &quot;Bot&quot;
+            break 
+        print(&quot;Choix invalide, veuillez entrer 1 ou 2.&quot;)  
+
+    board = [[&apos; &apos; for _ in range(3)] for _ in range(3)]
+    actual_player = &apos;X&apos;
+    player_names = { &apos;X&apos;: player1_name, &apos;O&apos;: player2_name }
+    
+    while True:
+        show_board(board)        
+        if player_names[actual_player] == &quot;Bot&quot;:
+            print(&quot;Le bot r&eacute;fl&eacute;chit...&quot;)
+            line, column = bot_move(board, &apos;O&apos;, &apos;X&apos;)
+            if board[line][column] == &apos; &apos;:
+                board[line][column] = &apos;O&apos;
+                if victory(board, &apos;O&apos;):
+                    show_board(board)
+                    print(&quot;Le bot a gagn&eacute; !&quot;)
+                    break
+        else:
+            line, column = player_move(player_names[actual_player], board) 
+            board[line][column] = actual_player
+        if victory(board, actual_player):
+            show_board(board)
+            print(f&quot;F&eacute;licitations ! {player_names[actual_player]} a gagn&eacute; !&quot;)
+            break
+        elif board_full(board):
+            show_board(board)
+            print(&quot;Match nul !&quot;)
+            break
+
+        actual_player = &apos;O&apos; if actual_player == &apos;X&apos; else &apos;X&apos;
+
+game_tic_tac_toe()
+</code>
+                        </pre>
+                    </div>
                     <h4 class="subsubtitle">Game Loop</h4>
                     <p class="text">The game_tic_tac_toe function orchestrates the flow of the game. 
                         It initializes the game by asking players to choose their mode (against another player or the bot) 
                         and sets up the board. The function contains the main game loop, which alternates turns between players, 
                         checks for victory or a full board, and updates the game state accordingly.<br>
                     </p>
-                </section>
+                </div>
             </div>
             <div class="pagepart">
                 <section class="card">
@@ -399,27 +552,105 @@
                 </section>
             </div>
             <div class="pagepart4">
-                <section class="screenshotcard">
+                <div class="screenshotcard">
                     <img class="pic1" src="./Media/pictures/Jinx-title.png" alt="screenshot of the live fansite jinx title with gif background">
                     <span class="text"><strong>Live Fansite Screenshot:</strong> The title JINX displayed in an eye-catching style</span>
-                    <img class="pic1" src="./Media/pictures/html-jinx-title.png" alt="screenshot of the html code for jinx title">
-                    <span class="text"><strong>HTML Structure:</strong> The presentation of Jinx uses semantic HTML tags</span>
-                    <img class="pic1" src="./Media/pictures/css-jinx-title.png" alt="screenshot of css code for jinx title with gif background">
-                    <span class="text"><strong>CSS Styling:</strong> CSS applies styles that enhance the presentation</span>
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+&lt;h1 class=&quot;maintitle&quot;&gt;JINX&lt;/h1&gt;
+&lt;div class=&quot;toppic&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;textback&quot;&gt;
+        &lt;p class=&quot;firsttext&quot;&gt;
+        Jinx est une anarchiste exub&eacute;rante connue pour ses cheveux bleus 
+        et son amour des explosions. Originaire de Zaun, elle incarne la folie et le chaos, captivant par 
+        son &eacute;nergie et son impr&eacute;visibilit&eacute;. Sa r&eacute;putation de fauteur de troubles la pr&eacute;c&egrave;de, avec une personnalit&eacute; 
+        explosive et un penchant pour le chaos. Son histoire d&eacute;bute dans les ruelles sombres de Zaun, o&ugrave; son esprit
+        rebelle et ses talents destructeurs se sont forg&eacute;s. Cette origine complexe contribue &agrave; son charme 
+        ind&eacute;niable et &agrave; sa place unique dans l&apos;univers du jeu.
+        &lt;/p&gt;
+    &lt;/div&gt;
+</code>
+                        </pre>
+                        <span class="text"><strong>HTML Structure:</strong> The presentation of Jinx uses semantic HTML tags</span>
+                            <pre class="precode">
+<code class="code">
+.maintitle {
+    font-family: "Graffiti";
+    color: #fb3eb9;
+    font-size: 7rem;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 0.4rem;
+    background-image: url(./Media2/Video2/jinxenfantadulte.gif);
+    background-repeat: no-repeat;
+    animation: flicker 1.5s infinite alternate;
+}
+@keyframes flicker {    
+0%, 18%, 22%, 25%, 53%, 57%, 100% {  
+    text-shadow:
+    0 0 4px #fd91d7,
+    0 0 11px #fd91d7,
+    0 0 19px #fd91d7,
+    0 0 40px rgb(242, 0, 255),
+    0 0 80px rgb(242, 0, 255),
+    0 0 90px rgb(234, 0, 255),
+    0 0 100px rgb(255, 0, 255),
+    0 0 150px rgb(255, 0, 217);
+}   
+20%, 24%, 55% {        
+    text-shadow: none;
+}    
+}
+</code>
+                            </pre>
+                            <span class="text"><strong>CSS Styling:</strong> CSS applies styles that enhance the presentation</span>
+                    </div>                  
                     <h4 class="subsubtitle">Character Overview:</h4>
                     <p class="text">The fansite begins with an introduction to Jinx, 
                         structured using semantic HTML tags like h1 for the main title and p for paragraphs. This approach improves SEO and accessibility, 
                         ensuring that fans can quickly grasp Jinx's background and significance within the League of Legends universe.
                         <br>
                     </p>
-                </section>
-                <section class="screenshotcard">
+                </div>
+                <div class="screenshotcard">
                     <img class="pic1" src="./Media/pictures/audio-lol-screenshot.png" alt="screenshot of the audio player">
                     <span class="text"><strong>Live Fansite Screenshot:</strong> The audio allows users to listen to songs associated with Jinx</span>
-                    <img class="pic1" src="./Media/pictures/html-audio.png" alt="screenshot of the html code for the audio player">
-                    <span class="text"><strong>HTML Structure:</strong> Showing the use of audio controls </span>
-                    <img class="pic1" src="./Media/pictures/css-audio.png" alt="screenshot of the css code for the audio player">
-                    <span class="text"><strong>CSS Styling:</strong> This part uses Flexbox to align elements smoothly</span>
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+&lt;div class=&quot;blackaudio&quot;&gt;
+    &lt;span class=&quot;audiotitle&quot;&gt;Blood Sweat &amp; Tears - Sheryl Lee Ralph&lt;/span&gt;
+    &lt;audio controls&gt;
+        &lt;source src=&quot;./Media2/Audio2/Blood-Sweat&amp;Tears-Sheryl-Lee-Ralph.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+        Votre navigateur ne prend pas en charge ce format audio. Voil&agrave; un 
+        &lt;a href=&quot;https://www.youtube.com/watch?v=rhTZTy1rZhw&amp;list=PLJP5_qSxMbkJvmDlvP8v_tZ5Lc8Fzginj&amp;index=17&quot;&gt;lien vers l&apos;audio&lt;/a&gt; sur youtube &agrave; la place.
+    &lt;/audio&gt;
+&lt;/div&gt;
+</code>
+                        </pre>
+                        <span class="text"><strong>HTML Structure:</strong> Showing the use of audio controls </span>
+                        <div class="codetext">
+                            <pre class="precode">
+    <code class="code">
+.blackaudio {
+    display: flex;
+    flex-direction: row;
+    color: #e7ebf2;
+    font-family: "QuicksandBold";
+    flex-wrap: wrap;
+    justify-content: end;
+    background-color: black;
+    text-align: end;
+    font-size: small;
+    padding-bottom: 5px;
+}
+    </code>
+                            </pre>
+                            <span class="text"><strong>CSS Styling:</strong> This part uses Flexbox to align elements smoothly</span>
+                        </div>
+                    </div>
                     <h4 class="subsubtitle">Audio Section:</h4>
                     <p class="text">Adding audio to the Jinx Fansite significantly enhances user experience by allowing fans to connect with Jinx through music. 
                         By integrating an audio player, structured with HTML and styled using CSS Flexbox for a smooth layout, 
@@ -431,7 +662,7 @@
                         prompting them to spend more time exploring the site. Overall, the audio enriches the atmosphere 
                         and caters to diverse user preferences, making the site more inviting and dynamic for all fans of Jinx.<br>
                     </p>
-                </section>
+                </div>
             </div>
             <div id="contact" class="pagepart4">
                 <section class="card">

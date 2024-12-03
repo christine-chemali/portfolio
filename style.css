@@ -12,6 +12,7 @@
     --link-text-active: red;
     --hover-icon-color: #ACADC9;
     --hover-text-color: #acadc996;
+    --color-block-code: #C2C0C43B;
     --font-title-bold: "CabinBold";
     --font-title-regular: "CabinRegular";
     --font-text-regular: "CourierPrime";
@@ -130,7 +131,7 @@ html {
     border-bottom: 10px solid var(--link-text-color);
 }
 .screenshotcard {
-    min-width: 47%;
+    min-width: 46.7%;
 }
 .title {
     font-family: var(--font-title-bold);
@@ -150,7 +151,6 @@ html {
     margin: auto;
     width: 100%;
 }
-
 .text {
     font-family: var(--font-text-regular);
     color: var(--main-text-color);
@@ -226,6 +226,17 @@ a {
     display: block;
     margin: auto;
     width: 100%;
+}
+.precode {
+    background-color: var(--color-block-code);
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    overflow:auto;
+    margin: auto;
+    max-width: 700px;
+}
+.code{
+    font-family: var(--font-text-regular);
 }
 /**************************** footer **********************/
 .socialmedia {
@@ -309,7 +320,7 @@ a {
 /*media main*/
 @media only screen and (max-width: 800px){
 .card, .screenshotcard {
-    width: auto;
+    width: 95%;
     margin-right: auto;
     margin-left: auto;
 }
