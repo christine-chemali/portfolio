@@ -1,22 +1,1184 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <méta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Explorez mon portfolio mettant en valeur mes compétences en développement de logiciels.">
-        <meta name="keywords" content="Développement logiciel, Python, HTML, CSS, Portfolio, Projets, Tic Tac Toe, Jinx Fansite">
-        <meta name="auteur" content="Christine Chemali">
+        <meta name="description" content="Explorez mon portfolio présentant mes compétences en développement logiciel.">
+        <meta name="keywords" content="Développement Logiciel, Python, HTML, CSS, Portfolio, Projets, Tic Tac Toe, Site de fans de Jinx">
+        <meta name="author" content="Christine Chemali">
         <meta name="robots" content="index, follow">
-        <meta property="og:title" content="Portfolio de développeurs de logiciels | Projets Python et HTML/CSS - Christine Chemali">
-        <meta property="og:description" content="Découvrez mes projets dont un jeu Tic Tac Toe en Python et un fansite Jinx construit avec HTML et CSS.">
+        <meta property="og:title" content="Portfolio de Développeur Logiciel | Projets Python & HTML/CSS - Christine Chemali">
+        <meta property="og:description" content="Découvrez mes projets incluant un jeu de Tic Tac Toe en Python et un site de fans de Jinx construit avec HTML et CSS.">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://christine-chemali.github.io/portfolio/">
         <meta property="og:image" content="./Media/pictures/keyboard.jpg">
-        <title>Portfolio de développeurs de logiciels | Projets Python & HTML/CSS - Christine Chemali</title>
+        <title>Portfolio de Développeur Logiciel | Projets Python & HTML/CSS - Christine Chemali</title>
         <link href="style.css" rel="stylesheet">
         <link rel="icon" href="./Media/icons/favicon-portfolio.ico">
     </head>
-    <body>
-        <span class="text">En cours de traduction</span>
+    
+    <body>   
+        <div class="page">
+            <header class="headermenu">
+                <nav class="navbar"> <!-- Menu --> 
+                    <input type="checkbox" id="hamburgermenu" class="hamburgermenu">
+                        <label for="hamburgermenu" class="menu">MENU</label>
+                            <ul class="navlist">
+                                <li><a href="#portfolio" class="link">PORTFOLIO</a></li>
+                                <li><a href="#index" class="link">INDEX</a></li>
+                                <li><a href="#pythonproject1" class="link">PYTHON</a></li>
+                                <li><a href="#HtmlCssproject1" class="link">HTML/CSS</a></li>
+                                <li><a href="#contact" class="link">CONTACT</a></li>
+                                <ul class="languagelinks">
+                                    <li><a href="index.html" class="lang">EN</a></li>
+                                    <li><a href="indexfr.html" class="lang">FR</a></li>
+                                </ul>
+                            </ul>
+                </nav>
+            </header>
+            <main class="mainpage">
+                <section id="portfolio" class="card">
+                    <h1 class="title">PORTFOLIO</h1>
+                    <p class="text">Bienvenue dans mon portfolio d'aspirant développeur logiciel !<br>
+                        Vous y découvrirez une sélection soigneusement élaborée de mes projets, mettant en avant mes compétences dans divers langages de programmation et frameworks, 
+                        tout en accordant une attention particulière à la qualité du code et à l'expérience utilisateur.<br>
+                        Je suis passionnée par l'application de la technologie pour résoudre des problèmes concrets. Chaque projet témoigne de mon engagement envers l'apprentissage continu et le perfectionnement, 
+                        alors que je relève de nouveaux défis et explore de nouveaux langages.<br>
+                        N'hésitez pas à parcourir mes réalisations et à me contacter pour toute question ou idée de collaboration.<br><br>
+                        Merci de votre visite !
+                    </p>
+                </section>
+                <section id="index" class="card">
+                    <h2 class="title">INDEX</h2>
+                    <div class="indextext">
+                        <ul>    
+                            <li class="language"><strong>PYTHON</strong><br>Explorez mes applications et solutions développées en Python        
+                                <ul>            
+                                    <li class="project"><a class="linkproject" href="#pythonproject1"><strong>PROJET 1 :</strong> Jeu - Tic Tac Toe</a></li>        
+                                </ul>    
+                            </li>    
+                            <li class="language"><strong>HTML/CSS</strong><br>Découvrez mes créations web et mises en page conçues avec HTML et CSS       
+                                <ul>             
+                                    <li class="project"><a class="linkproject" href="#HtmlCssproject1"><strong>PROJET 1 :</strong> Site de fans - Jinx</a></li>        
+                                </ul>    
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+            <div class="pagepart">
+                <section id="pythonproject1" class="card">
+                    <h2 class="title">TIC TAC TOE</h2>
+                    <span class="projectlanguage">PROJET PYTHON 1 :</span>
+                    <p class="text">Le Tic Tac Toe est un jeu de stratégie classique qui a amusé des générations de joueurs. Il se joue sur une grille de 3x3, 
+                        où les participants s'alternent pour remplir les cases avec leurs symboles respectifs — X ou O. L'objectif est clair : être le 
+                        premier à aligner trois de ses symboles, que ce soit horizontalement, verticalement ou en diagonale.<br><br>
+                        Ce projet présente ma réalisation du Tic Tac Toe en Python, mettant en avant mes compétences en programmation et ma compréhension de la logique du jeu.  
+                        Le jeu propose deux modes : un mode à deux joueurs où les utilisateurs peuvent s'affronter, et un mode bot où les joueurs peuvent défier un adversaire informatique.  
+                        Dans ce portfolio, je vais explorer les différents composants du jeu, fournir des détails sur la structure du code, et partager des démonstrations vidéo du gameplay.
+                    </p>
+                    <h3 class="subtitle">Fonctionnalités du jeu</h3>
+                    <p class="text">Le Tic Tac Toe intègre les fonctionnalités essentielles suivantes pour enrichir l'expérience utilisateur :<br><br>
+                        <strong>Mode Deux Joueurs :</strong> Dans ce mode, deux joueurs peuvent s'affronter en s'alternant pour réaliser leurs mouvements. 
+                        Le jeu invite les joueurs à indiquer la ligne et la colonne de leur choix, et le plateau se met à jour en temps réel. 
+                        Après chaque mouvement, le jeu vérifie si l'un des joueurs a gagné, assurant ainsi une expérience captivante jusqu'à ce 
+                        qu'un joueur remporte la partie ou que le jeu se termine par un match nul.<br><br>
+                        <strong>Mode Bot :</strong> Le joueur a la possibilité d'affronter un bot, ce qui introduit un niveau de défi supplémentaire. 
+                        Le bot applique une stratégie basique pour réaliser ses mouvements, en évaluant les occasions de victoire et en bloquant les 
+                        actions du joueur lorsque cela est nécessaire. Ce mode offre aux joueurs l'opportunité de perfectionner leurs compétences face
+                         à un adversaire virtuel.
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart">
+                <section class="card">
+                    <h3 class="subtitle">Décomposition du Code</h3>
+                    <p class="text">La réalisation du Tic Tac Toe en Python repose sur plusieurs fonctions essentielles, 
+                        chacune étant responsable d'une partie spécifique des fonctionnalités du jeu. 
+                        Pour mieux illustrer les éléments clés du code, j'ai inclus plusieurs extraits de code mettant en évidence des 
+                        sections importantes et leurs fonctions. Chaque extrait est accompagné d'une explication afin de clarifier son rôle 
+                        dans l'ensemble de l'implémentation. Voici un aperçu des principaux composants du code :<br><br>   
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart4">
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+# CREATE THE BOARD
+def show_board(board):
+    print(&quot; &quot;) 
+    print(&quot; &quot; * 13, &quot; TIC TAC TOE &quot;, &quot; &quot; * 13)
+    print(&quot; &quot;)
+    print(&quot;Pour jouer, entrez le numéro de la ligne&quot;)
+    print(&quot;et celui de la colonne. Exemple: 00&quot;) 
+    print(&quot; &quot;)  
+    print(&quot; &quot; * 13, &quot; &quot;, &quot;0 &quot;, &quot; 1 &quot;, &quot; 2 &quot;, &quot; &quot; * 13)
+    print(&quot; &quot; * 13, &quot;-&quot; * 13, &quot; &quot; * 13)
+    for index, row in enumerate(board): 
+        print(&quot; &quot; * 11, index, &quot;|&quot;, row[0], &quot;|&quot;, row[1], &quot;|&quot;, row[2], &quot;|&quot;, &quot; &quot; * 13) 
+        print(&quot; &quot; * 13, &quot;-&quot; * 13, &quot; &quot; * 13)
+    print(&quot; &quot;)  
+</code>
+                        </pre>
+                    </div>
+                    <h4 class="subsubtitle">Création du Plateau</h4>
+                    <p class="text">La fonction show_board est chargée d'afficher l'état actuel du plateau de jeu aux joueurs. 
+                        Elle imprime la configuration de la grille, incluant les chiffres correspondant à chaque cellule, et met 
+                        à jour l'affichage après chaque mouvement. Cette fonction enrichit l'expérience utilisateur en offrant 
+                        une représentation visuelle claire du jeu.
+                        <br>
+                    </p>
+                </div>
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+#  CHECK FOR VICTORY
+def victory(board, player): 
+    for row in range(3): 
+        if board[row][0] == player and board[row][1] == player and board[row][2] == player: 
+            return True
+    for col in range(3):    
+        if board[0][col] == player and board[1][col] == player and board[2][col] == player:
+            return True 
+    if board[0][0] == player and board[1][1] == player and board[2][2] == player: 
+        return True  
+    if board[0][2] == player and board[1][1] == player and board[2][0] == player: 
+        return True  
+    return False
+</code>
+                        </pre>
+                    </div>
+                    <h4 class="subsubtitle">Vérification de la Victoire</h4>
+                    <p class="text">La fonction victory détermine si un joueur a remporté la partie. 
+                        Elle examine toutes les combinaisons gagnantes possibles : trois lignes, trois colonnes et deux 
+                        diagonales. Si l'une de ces combinaisons présente le symbole du même joueur, la fonction renvoie True, 
+                        signalant ainsi une victoire.<br>
+                    </p>
+                </div>
+            </div>
+            <div class="pagepart4">
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+# BOARD FULL
+def board_full(board):
+    for row in board: 
+        for cell in row:
+            if cell == &quot; &quot;: 
+                return False 
+    return True 
+</code>
+                        </pre>
+                    </div>
+                    <h4 class="subsubtitle">Contrôle du Plateau </h4>
+                    <p class="text">La fonction board_full vérifie si le plateau de jeu est entièrement occupé. 
+                        Elle parcourt toutes les cellules de la grille pour détecter la présence d'espaces vides. 
+                        Si aucune cellule n'est vide, la fonction renvoie True, signalant ainsi un match nul.
+                        <br>
+                    </p>
+                </div>
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+# PLAYER MOVE
+def player_move(player_name, board): 
+    while True:
+        move = input(f&quot;{player_name}, entrez votre mouvement (ligne colonne) : &quot;)
+        if len(move) == 2: 
+            try:
+                line = int(move[0]) 
+                column = int(move[1])
+                if 0 &lt;= line &lt;= 2 and 0 &lt;= column &lt;= 2:
+                    if board[line][column] == &apos; &apos;:
+                        return line, column
+                    else:
+                        print(&quot;Cette case est déjà occupée. Essayez à nouveau.&quot;)
+                else:
+                    print(&quot;Veuillez entrer des chiffres entre 0 et 2.&quot;)
+            except ValueError: 
+                print(&quot;Entrée invalide. Veuillez entrer deux chiffres.&quot;)
+        else:
+            print(&quot;Entrée invalide. Assurez-vous d&apos;entrer exactement deux chiffres.&quot;)
+</code>
+                        </pre>
+                    </div>
+                    <h4 class="subsubtitle">Logique du Mouvement du Joueur</h4>
+                    <p class="text">La fonction player_move s'occupe de la saisie des mouvements des joueurs. 
+                        Elle invite le joueur à entrer son coup sous la forme de numéros de ligne et de colonne. 
+                        La fonction inclut une validation pour garantir que l'entrée est correcte, en vérifiant les longueurs et 
+                        les plages appropriées, puis renvoie les coordonnées du mouvement.<br>
+                    </p>
+                </div>
+            </div>
+            <div class="pagepart4">
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+# BOT MOVE
+def bot_move(board, bot, human):
+    if board[1][1] == &apos; &apos;:
+        return 1, 1
+    for row in range(3): 
+        for column in range(3):
+            if board[row][column] == &apos; &apos;:
+                board[row][column] = bot
+                if victory(board, bot):
+                    return row, column  
+                board[row][column] = &apos; &apos; 
+    for row in range(3):  
+        for column in range(3):
+            if board[row][column] == &apos; &apos;:
+                board[row][column] = human
+                if victory(board, human):
+                    board[row][column] = &apos; &apos;  
+                    return row, column  
+                board[row][column] = &apos; &apos;  
+    for row in range(3): 
+        for column in range(3):
+            if board[row][column] == &apos; &apos;:
+                return row, column 
+    return -1, -1  
+</code>
+                        </pre>
+                    </div>
+                    <h4 class="subsubtitle">Logique du Bot</h4>
+                    <p class="text">La fonction bot_move met en œuvre la stratégie du bot pour effectuer des mouvements. 
+                        Le bot commence par vérifier si la cellule centrale est libre ; si c'est le cas, il l'occupe. 
+                        Ensuite, il analyse le plateau à la recherche d'opportunités de victoire ou de possibilités de bloquer 
+                        le joueur humain. Si aucune de ces conditions n'est rencontrée, le bot sélectionne la première 
+                        cellule disponible, assurant ainsi la continuité du jeu.
+                        <br>
+                    </p>
+                </div>
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+# GAME PLAY FUNCTION
+def game_tic_tac_toe(): 
+    print(&quot; &quot;) 
+    print(&quot; &quot; * 13, &quot; TIC TAC TOE &quot;, &quot; &quot; * 13)
+    print(&quot; &quot;)
+    while True:
+        mode = input(&quot;Voulez-vous jouer contre un autre joueur (1) ou contre le bot (2)? Entrez 1 ou 2: &quot;)    
+        if mode == &apos;1&apos;:
+            player1_name = input(&quot;Entrez le nom du joueur 1 : &quot;)
+            player2_name = input(&quot;Entrez le nom du joueur 2 : &quot;)
+            break  
+        if mode == &apos;2&apos;:
+            player1_name = input(&quot;Entrez votre nom : &quot;)
+            player2_name = &quot;Bot&quot;
+            break 
+        print(&quot;Choix invalide, veuillez entrer 1 ou 2.&quot;)  
+
+    board = [[&apos; &apos; for _ in range(3)] for _ in range(3)]
+    actual_player = &apos;X&apos;
+    player_names = { &apos;X&apos;: player1_name, &apos;O&apos;: player2_name }
+    
+    while True:
+        show_board(board)        
+        if player_names[actual_player] == &quot;Bot&quot;:
+            print(&quot;Le bot réfléchit...&quot;)
+            line, column = bot_move(board, &apos;O&apos;, &apos;X&apos;)
+            if board[line][column] == &apos; &apos;:
+                board[line][column] = &apos;O&apos;
+                if victory(board, &apos;O&apos;):
+                    show_board(board)
+                    print(&quot;Le bot a gagné !&quot;)
+                    break
+        else:
+            line, column = player_move(player_names[actual_player], board) 
+            board[line][column] = actual_player
+        if victory(board, actual_player):
+            show_board(board)
+            print(f&quot;Félicitations ! {player_names[actual_player]} a gagné !&quot;)
+            break
+        elif board_full(board):
+            show_board(board)
+            print(&quot;Match nul !&quot;)
+            break
+
+        actual_player = &apos;O&apos; if actual_player == &apos;X&apos; else &apos;X&apos;
+
+game_tic_tac_toe()
+</code>
+                        </pre>
+                    </div>
+                    <h4 class="subsubtitle">Boucle de Jeu</h4>
+                    <p class="text">La fonction game_tic_tac_toe coordonne le déroulement du jeu. 
+                        Elle commence par initier la partie en demandant aux joueurs de sélectionner leur mode 
+                        (contre un autre joueur ou le bot) et met en place le plateau. 
+                        Cette fonction inclut la boucle principale du jeu, qui alterne les tours entre les joueurs, 
+                        vérifie les conditions de victoire ou de plateau plein, et met à jour l'état du jeu en conséquence.<br>
+                    </p>
+                </div>
+            </div>
+            <div class="pagepart">
+                <section class="card">
+                    <h3 class="subtitle">Gestion des Erreurs</h3>
+                    <p class="text">La gestion des erreurs est un élément essentiel du jeu, assurant une expérience utilisateur 
+                        sans accroc et prévenant les plantages provoqués par des entrées invalides. 
+                        Le jeu intègre divers mécanismes pour traiter les erreurs potentielles :
+                    </p>
+                    <ul class="listtext">
+                        <li class="listtext"><strong>Validation des Entrées : </strong>La fonction player_move inclut une validation rigoureuse des saisies. 
+                            Elle s'assure que l'entrée du joueur contient exactement deux caractères, et que ces deux caractères sont des chiffres. 
+                            Si l'entrée est invalide, la fonction fournit un retour d'information clair, invitant le joueur à réessayer 
+                            en respectant le format correct.
+                        </li>
+                        <li class="listtext"><strong>Vérification des Plages : </strong>
+                            Une fois que l'entrée a été confirmée comme numérique, la fonction vérifie si les numéros de ligne et de colonne 
+                            fournis se situent dans la plage valide (de 0 à 2). Si les numéros dépassent cette plage, le joueur en est informé et 
+                            invité à fournir des coordonnées valides.
+                        </li>
+                        <li class="listtext"><strong>Gestion des Cellules Occupées : </strong>
+                            Au cours de la partie, si un joueur essaie d'occuper une cellule déjà occupée, 
+                            le jeu examine l'état du plateau et informe le joueur que la case choisie n'est pas disponible. 
+                            Cela évite les mouvements invalides et assure que le jeu demeure équitable et agréable.
+                        </li>
+                    </ul>                  
+                    <p class="text">Ces mécanismes de gestion des erreurs favorisent une expérience utilisateur agréable, 
+                        permettant aux joueurs de se concentrer sur le jeu sans être frustrés par des problèmes imprévus. 
+                        En offrant des instructions et des retours d'information clairs, le jeu renforce l'engagement et le 
+                        plaisir des participants.
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart">
+                <section class="card">
+                    <h3 class="subtitle">Démonstrations Vidéo</h3>
+                    <p class="text">Afin d'offrir une compréhension approfondie du fonctionnement du jeu, 
+                        j'ai intégré plusieurs démonstrations vidéo illustrant différents scénarios de jeu. 
+                        Chaque vidéo met en lumière divers aspects, allant des interactions entre joueurs au 
+                        processus de prise de décision du bot. Voici les détails :
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart4">
+                <section class="screenshotcard">
+                    <video class="vid" controls loop autoplay muted>
+                        <source src="./Media/Videos/draw-between-two-players.mp4" type="video/mp4">
+                        Votre navigateur ne prend pas en charge ce format de vidéo.
+                    </video>
+                    <h4 class="subsubtitle">Match Nul entre Deux Joueurs </h4>
+                    <p class="text">Cette vidéo montre un match complet où deux joueurs s'affrontent, 
+                        se terminant finalement par un match nul. Elle met en avant la nature réciproque des mouvements des joueurs et les stratégies 
+                        employées pour bloquer les tentatives de victoire de l'autre.
+                        <br>
+                    </p>
+                </section>
+                <section class="screenshotcard">
+                    <video class="vid" controls loop autoplay muted>
+                        <source src="./Media/Videos/win-between-two-players.mp4" type="video/mp4">
+                        Votre navigateur ne prend pas en charge ce format de vidéo.
+                    </video>
+                    <h4 class="subsubtitle">Scénario de Victoire d'un Joueur </h4>
+                    <p class="text">Dans cette vidéo, un joueur parvient à aligner ses symboles pour remporter la partie. 
+                        Elle met en avant le coup gagnant ainsi que la réaction immédiate des joueurs, 
+                        célébrant ainsi la victoire.
+                        <br>
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart4">
+                <section class="screenshotcard">
+                    <video class="vid" controls loop autoplay muted>
+                        <source src="./Media/Videos/bot-win.mp4" type="video/mp4">
+                        Votre navigateur ne prend pas en charge ce format de vidéo.
+                    </video>
+                    <h4 class="subsubtitle">Scénario de Victoire du Bot</h4>
+                    <p class="text">Cette démonstration présente un match où un joueur humain se mesure au bot. 
+                        Ce dernier applique sa stratégie pour garantir sa victoire, offrant ainsi un aperçu de la manière dont il 
+                        évalue le plateau et prend ses décisions.
+                        <br>
+                    </p>
+                </section>
+                <section class="screenshotcard">
+                    <video class="vid" controls loop autoplay muted>
+                        <source src="./Media/Videos/error-handling.mp4" type="video/mp4">
+                        Votre navigateur ne prend pas en charge ce format de vidéo.
+                    </video>
+                    <h4 class="subsubtitle">Gestion des Erreurs en Pratique.</h4>
+                    <p class="text">Cette vidéo démontre comment le jeu gère les entrées utilisateur invalides et les cellules déjà occupées. 
+                        Elle présente les messages et retours que les joueurs reçoivent lorsqu'ils essaient d'effectuer des mouvements non valides, 
+                        mettant en évidence l'importance de la gestion des erreurs pour garantir une expérience de jeu fluide.
+                        <br>
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart">
+                <section class="card">
+                    <h3 class="subtitle">Bilan de l'apprentissage</h3>
+                    <p class="text">Créer le jeu a été une expérience enrichissante qui a approfondi ma compréhension de concepts 
+                        de programmation tels que la logique de jeu, la gestion des entrées utilisateur et la vérification des 
+                        conditions. J'ai appris à développer un jeu au tour par tour où deux joueurs (ou un joueur et un bot) 
+                        peuvent interagir de manière dynamique.<br>
+                        L'un des principaux défis que j'ai rencontrés a été de garantir que la logique du jeu gérait correctement 
+                        divers scénarios, tels que la détection des victoires, la gestion des mouvements invalides et le maintien 
+                        d'un flux de jeu fluide. J'ai surmonté ces difficultés en procédant à un débogage systématique du code et 
+                        en effectuant des tests, ce qui m'a permis d'identifier les aspects nécessitant des améliorations.<br>
+                        De plus, j'ai acquis de l'expérience dans la création d'un bot simple, impliquant des vérifications 
+                        conditionnelles pour déterminer les mouvements gagnants et bloquer les victoires potentielles du joueur. 
+                        Cela a renforcé ma compréhension de la pensée algorithmique et de la manière de structurer les processus 
+                        de prise de décision au sein d'un programme.
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart">
+                <section class="card">
+                    <h3 class="subtitle">Améliorations Possibles</h3>
+                    <p class="text">En se projetant vers l'avenir, plusieurs améliorations potentielles pourraient 
+                        être envisagées pour enrichir le jeu :
+                    </p>
+                    <ul class="listtext">
+                        <li class="listtext"><strong>Optimisation de l'Intelligence du Bot : </strong>Actuellement, le bot adopte une stratégie simple, se concentrant sur la victoire 
+                            ou le blocage des actions du joueur. Je souhaiterais intégrer un algorithme plus avancé, comme l'algorithme Minimax, 
+                            qui permettrait au bot d'examiner tous les mouvements potentiels et de sélectionner le meilleur choix. 
+                            Cela rendrait le jeu plus stimulant pour les joueurs.
+                        </li>
+                        <li class="listtext"><strong>Ajout d'une Interface Graphique (GUI) : </strong>
+                            Bien que l'interface textuelle soit opérationnelle, développer une interface graphique avec un 
+                            framework tel que Tkinter ou Pygame améliorerait nettement l'expérience utilisateur. 
+                            Une représentation visuelle du plateau de jeu la rendrait plus attrayante et intuitive pour 
+                            les joueurs.
+                        </li>
+                        <li class="listtext"><strong>Implémentation de Différents Modes de Jeu : </strong>
+                            Je pourrais ajouter des modes de jeu supplémentaires, comme la possibilité de jouer 
+                            contre un autre bot avec divers niveaux de difficulté, 
+                            ou même un mode multijoueur où les joueurs peuvent s'affronter en ligne.
+                        </li>
+                        <li class="listtext"><strong>Statistiques et Classements : </strong>
+                            Intégrer une fonctionnalité pour suivre les victoires, les défaites et les matchs nuls des joueurs 
+                            permettrait de leur fournir des retours sur leurs performances. De plus, un classement stimulerait 
+                            l'esprit compétitif et offrirait un sentiment d'accomplissement.
+                        </li>
+                        <li class="listtext"><strong>Règles de Jeu Personnalisables : </strong>
+                            Autoriser les joueurs à modifier la taille du plateau (par exemple, des grilles de 4x4 ou 5x5) 
+                            ou à changer les conditions de victoire (comme exiger quatre alignés) pourrait apporter de la
+                             diversité et améliorer la rejouabilité.
+                        </li>
+                    </ul>                  
+                    <p class="text">En intégrant ces améliorations, mon objectif est de développer un Tic Tac Toe plus solide, captivant et plaisant.
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart">
+                <section class="card">
+                    <h3 class="subtitle">Aperçu du Projet et Lien du Dépôt</h3>
+                    <p class="text">Pour découvrir les différentes versions du jeu, vous pouvez consulter le dépôt GitHub qui contient les 
+                        fichiers du projet.<br> 
+                        Le fichier tictactoe.py présente une version simple du jeu, permettant à deux joueurs de 
+                        s'affronter avec les symboles X et O. Si vous cherchez un défi contre un bot basique, jetez un œil à 
+                        TicTacToeBot.py, qui propose une version où l'utilisateur joue contre un bot. Pour une expérience plus avancée, 
+                        TicTacToeBotPlayer.py vous permet de jouer contre un autre joueur, d'entrer les noms des participants, 
+                        ou de défier un bot légèrement plus "intelligent".<br> 
+                        N'hésitez pas à explorer le code et à découvrir comment 
+                        chaque version enrichit l'expérience de jeu !<br><br> 
+                        Vous pouvez trouver le dépôt ici :<a class="project" href="https://github.com/christine-chemali/TicTacToe.git" target="_blank"> Dépôt GitHub Tic Tac Toe</a>
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart">
+                <section id="HtmlCssproject1" class="card">
+                    <h2 class="title">Site de Fans</h2>
+                    <span class="projectlanguage">PROJET HTML/CSS 1 :</span>
+                    <p class="text">Le Projet de Site de Fans est une initiative collaborative de développement web dédiée à 
+                        trois célébrités distinctes. L'objectif de ce projet est de créer une plateforme captivante où les fans 
+                        peuvent découvrir et interagir avec leurs personnalités favorites à travers un site bien structuré et 
+                        esthétiquement agréable.<br> 
+                        Chaque membre du projet a contribué à la création de pages individuelles, à savoir fansite1.html, 
+                        fansite2.html et fansite3.html, tout en maintenant un design harmonieux à l'aide de fichiers CSS 
+                        distincts, intitulés fansite1.css, fansite2.css et fansite3.css. Le site inclut une page d'accueil 
+                        (index.html) qui offre une brève présentation des trois célébrités ou groupes mis en avant, ainsi
+                         que des liens vers leurs pages respectives.<br>
+                        Chaque page dédiée regorge d'informations, permettant aux fans d'accéder facilement aux actualités, 
+                        réalisations, événements et contenus multimédias concernant leurs favoris. L'utilisation de HTML5 et 
+                        CSS garantit un design moderne et réactif, s'adaptant parfaitement à différents appareils et améliorant 
+                        ainsi l'expérience utilisateur globale.
+                        <br>
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart">
+                <section class="card">
+                    <h3 class="subtitle">Aperçu du Projet, Version Live du Site de Fans et Lien du Dépôt</h3>
+                    <p class="text">Le Projet de Site de Fans met en avant les efforts collaboratifs de notre équipe pour créer une plateforme dédiée aux fans de 
+                        héros fictifs ou de célébrités de la musique.<br><br>
+                        Vous pouvez trouver le dépôt complet ici :<a class="project" href="https://github.com/christine-chemali/FansiteMJN.git" target="_blank"> Dépôt GitHub Site de Fans</a>
+                        <br><br>
+                        Dans ce portfolio, je vais me concentrer spécifiquement sur ma contribution au Site de Fans, en présentant 
+                        les fichiers fansite2.html et fansite2.css, tout en détaillant les caractéristiques et fonctionnalités 
+                        clés que j'ai développées.<br> 
+                        Ce projet constitue un exercice pour améliorer mes compétences en développement 
+                        web, en mettant l'accent uniquement sur le design front-end, ce qui signifie que la barre de recherche, les 
+                        liens vers les réseaux sociaux et la section de contact ne sont pas fonctionnels.<br> 
+                        De plus, je ne dispose pas des droits sur les images, vidéos et autres contenus utilisés. Si vous êtes titulaire des droits sur 
+                        l'un de ces contenus et souhaitez que je le retire, merci de <a class="project" href="mailto:christine.chemali@laplateforme.io" target="_blank" aria-label=" mail to Christine Chemali">m'envoyer un email.</a>
+                        <br><br>Vous pouvez accéder à la version live du site de fans de Jinx ici :<a href="fansite2.html" class="project" target="_blank"> Site de fans de Jinx</a>
+                        <br>
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart">
+                <section class="card">
+                    <h3 class="subtitle">Caractéristiques Clés</h3>
+                    <p class="text">Le site de fans de Jinx est doté de plusieurs caractéristiques clés qui améliorent 
+                        l'expérience utilisateur tout en mettant en avant mes compétences en codage et mes choix de design. 
+                        Mon objectif principal était de concevoir une mise en page attrayante et un contenu informatif pour la page 
+                        fansite2.html, qui comprend les éléments suivants :<br>
+                    </p>
+                </section>
+            </div>
+            <div class="pagepart4">
+                <div class="screenshotcard">
+                    <div class="codetext">
+                        <pre class="precode">
+<code class="code">
+&lt;h1 class=&quot;maintitle&quot;&gt;JINX&lt;/h1&gt;
+&lt;div class=&quot;toppic&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;textback&quot;&gt;
+        &lt;p class=&quot;firsttext&quot;&gt;
+        Jinx est une anarchiste exubérante connue pour ses cheveux bleus 
+        et son amour des explosions. Originaire de Zaun, elle incarne la folie et le chaos, captivant par 
+        son énergie et son imprévisibilité. Sa réputation de fauteur de troubles la précède, avec une personnalité 
+        explosive et un penchant pour le chaos. Son histoire débute dans les ruelles sombres de Zaun, où son esprit
+        rebelle et ses talents destructeurs se sont forgés. Cette origine complexe contribue à son charme 
+        indéniable et à sa place unique dans l'univers du jeu.
+        &lt;/p&gt;
+    &lt;/div&gt;
+</code>
+                        </pre>
+                        <span class="text"><strong>Structure HTML :</strong> Balises HTML Sémantiques</span>
+                            <pre class="precode">
+<code class="code">
+.maintitle {
+    font-family: "Graffiti";
+    color: #fb3eb9;
+    font-size: 7rem;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 0.4rem;
+    background-image: url(./Media2/Video2/jinxenfantadulte.gif);
+    background-repeat: no-repeat;
+    animation: flicker 1.5s infinite alternate;
+}
+@keyframes flicker {    
+0%, 18%, 22%, 25%, 53%, 57%, 100% {  
+    text-shadow:
+    0 0 4px #fd91d7,
+    0 0 11px #fd91d7,
+    0 0 19px #fd91d7,
+    0 0 40px rgb(242, 0, 255),
+    0 0 80px rgb(242, 0, 255),
+    0 0 90px rgb(234, 0, 255),
+    0 0 100px rgb(255, 0, 255),
+    0 0 150px rgb(255, 0, 217);
+}   
+20%, 24%, 55% {        
+    text-shadow: none;
+}    
+}
+</code>
+                            </pre>
+                            <span class="text"><strong>Stylisation CSS :</strong> backround-image, animation, letter-spacing </span>
+                        </div>                  
+                        <h4 class="subsubtitle">Présentation du Personnage :</h4>
+                        <p class="text">Le site de fans débute par une présentation de Jinx, organisée à l'aide de balises HTML sémantiques telles 
+                            que h1 pour le titre principal et p pour les paragraphes. Cette méthode améliore le référencement et l'accessibilité, 
+                            permettant ainsi aux fans de saisir rapidement l'histoire et l'importance de Jinx dans l'univers de League of Legends.
+                            <br>
+                        </p>
+                    </div>
+                    <div class="screenshotcard">
+                        <div class="codetext">
+                            <pre class="precode">
+<code class="code">
+&lt;div class=&quot;blackaudio&quot;&gt;
+    &lt;span class=&quot;audiotitle&quot;&gt;Blood Sweat &amp; Tears - Sheryl Lee Ralph&lt;/span&gt;
+    &lt;audio controls&gt;
+        &lt;source src=&quot;./Media2/Audio2/Blood-Sweat&amp;Tears-Sheryl-Lee-Ralph.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+        Votre navigateur ne prend pas en charge ce format audio. Voilà un 
+        &lt;a href=&quot;https://www.youtube.com/watch?v=rhTZTy1rZhw&amp;list=PLJP5_qSxMbkJvmDlvP8v_tZ5Lc8Fzginj&amp;index=17&quot;&gt;lien vers l&apos;audio&lt;/a&gt; sur YouTube à la place.
+    &lt;/audio&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;saison1&quot;&gt;
+    &lt;video class=&quot;videotrailers1&quot; controls loop autoplay muted&gt;
+        &lt;source src=&quot;./Media2/Video2/Arcane-Saison1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        Votre navigateur ne prend pas en charge ce format de vidéo.
+    &lt;/video&gt;
+&lt;/div&gt;
+</code>
+                            </pre>
+                            <span class="text"><strong>Structure HTML :</strong> source, audio, video</span>
+                            <div class="codetext">
+                                <pre class="precode">
+<code class="code">
+.blackaudio {
+    display: flex;
+    flex-direction: row;
+    color: #e7ebf2;
+    font-family: "QuicksandBold";
+    flex-wrap: wrap;
+    justify-content: end;
+    background-color: black;
+    text-align: end;
+    font-size: small;
+    padding-bottom: 5px;
+}
+.saison1 {    
+    display: flex;    
+    justify-content: center;    
+    align-items: center;    
+    width: 100%;
+    background: black;
+    padding-bottom: 15px;
+}
+.videotrailers1 {    
+    margin: auto;
+    display: block;
+    width: 80%;
+    border-radius: 5px;
+}
+</code>
+                                </pre>
+                                <span class="text"><strong>Stylisation CSS :</strong> flex-direction, flex-wrap, justify-content, align-items </span>
+                            </div>
+                        </div>
+                        <h4 class="subsubtitle">Audio & Vidéo :</h4>
+                        <p class="text">L'intégration de l'audio et de la vidéo sur le site de fans de Jinx améliore considérablement l'expérience 
+                            utilisateur, permettant aux fans de se connecter avec Jinx à travers la musique et des visuels captivants.<br> 
+                            Avec un lecteur audio intégré pour des chansons telles que "Blood Sweat & Tears" de Sheryl Lee Ralph et des extraits 
+                            vidéo présentant ses aventures dans la série Arcane, les utilisateurs peuvent facilement interagir avec le contenu. 
+                            Les contrôles de lecture pour l'audio et la vidéo offrent une expérience interactive, favorisant une connexion émotionnelle 
+                            qui reflète la personnalité dynamique de Jinx.<br> 
+                            Cette combinaison engageante incite à des visites prolongées et crée un 
+                            sentiment de communauté parmi les fans. <br> 
+                            En somme, cette intégration enrichit l'atmosphère du site, le rendant plus accueillant et vivant pour tous les passionnés 
+                            de Jinx.
+                        </p>
+                    </div>
+                </div>
+                <div class="pagepart4">
+                    <div class="screenshotcard">
+                        <div class="codetext">
+                            <pre class="precode">
+<code class="code">
+&lt;form class=&quot;newsletterblock&quot; action=&quot;action_page.php&quot;&gt;
+    &lt;section class=&quot;newslettertitle&quot;&gt;
+        &lt;h2 class=&quot;newsletterjinx&quot;&gt;Si t&apos;es Jinx&lt;br&gt;Abonne toi&lt;br&gt;aux News&lt;/h2&gt;
+    &lt;/section&gt;
+    &lt;div class=&quot;newsletterform&quot;&gt;
+        &lt;label class=&quot;labelnews&quot; for=&quot;prenom&quot;&gt;Prénom&lt;/label&gt;&lt;br&gt;
+        &lt;input type=&quot;text&quot; id=&quot;prenom&quot; class=&quot;inputnews&quot; placeholder=&quot; Ton prénom&quot; name=&quot;prenom&quot; aria-label=&quot;prenom&quot; required&gt;
+        &lt;br&gt;
+        &lt;label class=&quot;labelnews&quot; for=&quot;E-mail&quot;&gt;E-mail&lt;/label&gt;&lt;br&gt;
+        &lt;input type=&quot;text&quot; id=&quot;E-mail&quot; class=&quot;inputnews&quot; placeholder=&quot; Ton e-mail&quot; name=&quot;E-mail&quot; aria-label=&quot;E-mail&quot; required&gt;
+        &lt;br&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;buttonnews&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;checkbox&quot; class=&quot;checkboxnews&quot; name=&quot;checkbox&quot; aria-label=&quot;case à cocher&quot; required&gt;
+        &lt;label class=&quot;labelcheck&quot; for=&quot;checkbox&quot;&gt;J&apos;ai lu et j&apos;accepte la&lt;br&gt;&lt;a href=&quot;https://jinx/politiquedeconfidentialité.com&quot; &gt;politique de confidentialité&lt;/a&gt;&lt;/label&gt;
+        &lt;br&gt;
+        &lt;button class=&quot;buttonabo&quot; aria-label=&quot;je m&apos;abonne&quot; type=&quot;submit&quot;&gt;Je m&apos;abonne&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code>
+                            </pre>
+                            <span class="text"><strong>Structure HTML :</strong> form, label, input, checkbox, button</span>
+                                <pre class="precode">
+<code class="code">
+.newsletterblock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: black;
+    color: #fb3eb9;
+    font-family: &quot;Quicksandbold&quot;;
+    padding: 10px;
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+}
+</code>
+                                </pre>
+                                <span class="text"><strong>Stylisation CSS :</strong> display, flex-direction, flex-wrap, justify-content</span>
+                        </div>                  
+                        <h4 class="subsubtitle">Abonnement à la Newsletter :</h4>
+                        <p class="text">J'ai créé un formulaire d'abonnement dynamique à la newsletter pour tenir les fans au courant des actualités 
+                            concernant Jinx, y compris les mises à jour du jeu, les nouveaux skins et ses apparitions dans la série Arcane. 
+                            En utilisant des éléments de formulaire HTML et en le stylisant avec CSS Flexbox, j'ai veillé à ce que le formulaire soit à la 
+                            fois facile à utiliser et esthétiquement plaisant.
+                            <br>
+                        </p>
+                    </div>
+                    <div class="screenshotcard">
+                        <div class="codetext">
+                            <pre class="precode">
+<code class="code">
+&lt;div class=&quot;goodmerch&quot;&gt;
+    &lt;div class=&quot;merch&quot;&gt;
+        &lt;section class=&quot;text2&quot;&gt;
+            &lt;h3 class=&quot;Riotgame&quot;&gt;Notre Sélection :&lt;/h3&gt;
+            &lt;p&gt;
+            Nous avons sélectionné sept articles incontournables pour 
+            tous les fans ! ...
+            &lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section&quot;&gt;
+        &lt;div class=&quot;character3&quot;&gt;
+            &lt;div class=&quot;pic&quot;&gt;
+                &lt;img class=&quot;goodiespic&quot; src=&quot;./Media2/Pictures2/singe-mecanique.png&quot;  alt=&quot;acheter le singe mécanique de jinx&quot;&gt;
+            &lt;/div&gt;
+            &lt;form class=&quot;underunicorn&quot; action=&quot;https://merch.riotgames.com/fr-fr/product/arcane-powder-s-wind-up-monkey/&quot; rel=&quot;noopener noreferrer&quot;&gt;
+                &lt;span class=&quot;avatar&quot;&gt; Singe mécanique de Powder x Arcane &lt;/span&gt;
+                &lt;input class=&quot;buttonsubmit&quot; aria-label=&quot;Mon coup de foudre&quot; type=&quot;submit&quot; value=&quot;MON COUP DE FOUDRE&quot; rel=&quot;noopener noreferrer&quot;&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code>
+                            </pre>
+                            <span class="text"><strong>Structure HTML :</strong> div, section, img, form, input </span>
+                            <div class="codetext">
+                                <pre class="precode">
+<code class="code">
+.goodmerch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    background-image: url(./Media2/Video2/JinxWildrift.gif);
+    background-size: contain;
+}
+.section {
+    width: 31%;
+    margin: 5px;
+    padding: 5px;
+}
+@media only screen and (min-width: 942px) and (max-width: 1207px){
+    .section {
+        width: 47%;
+    }
+}
+@media only screen and (min-width: 896px) and (max-width: 941px) {
+    .section {
+        width: 46%;
+    }
+}
+@media only screen and (max-width: 895px) {
+    .section {
+        width: auto;
+    }
+}
+</code>
+                                </pre>
+                                <span class="text"><strong>Stylisation CSS :</strong> @media only screen, flex-direction, flex-wrap</span>
+                            </div>
+                        </div>
+                        <h4 class="subsubtitle">Goodies : </h4>
+                        <p class="text">La section goodies présente une sélection de produits dérivés liés à Jinx, organisée dans une mise en page 
+                            visuellement attrayante. J'ai utilisé CSS Flexbox pour créer un affichage en grille réactif des images des produits, 
+                            permettant aux fans de parcourir facilement les articles.<br> 
+                            Chaque produit est accompagné de boutons descriptifs, conçus à l'aide d'éléments de formulaire et d'entrée, ce qui facilite le processus d'achat pour les utilisateurs.<br> 
+                            Cette section non seulement améliore l'expérience des fans en leur offrant un accès à des produits uniques, mais elle met 
+                            également en avant des éléments de commerce électronique à la fois fonctionnels et esthétiques.
+                        </p>
+                    </div>
+                </div>
+                <div class="pagepart4">
+                    <div class="screenshotcard">
+                        <div class="codetext">
+                            <pre class="precode">
+<code class="code">
+&lt;div class=&quot;flexpics&quot;&gt;
+    &lt;img class=&quot;imagereal&quot; src=&quot;./Media2/Pictures2/fanart/Arcane-Jinx-de-profil.jpg&quot; alt=&quot;Profil de Jinx d&apos;Arcane&quot;&gt;
+    &lt;img class=&quot;imagereal&quot; src=&quot;./Media2/Pictures2/fanart/Arcane-Jinx-le-regard-perdu-tristesse.jpg&quot; alt=&quot;Jinx d&apos;Arcane avec un regard perdu et triste&quot;&gt;
+    &lt;img class=&quot;imagereal&quot; src=&quot;./Media2/Pictures2/fanart/Arcane-Jinx-prête-à-en-découdre-assise-déterminée-attendant-son-heure.jpg&quot; alt=&quot;Jinx d&apos;Arcane prête à se battre, assise avec détermination&quot;&gt;
+    &lt;img class=&quot;imagereal&quot; src=&quot;./Media2/Pictures2/fanart/Arcane-Powder-le-regard-triste-et-perdu.jpg&quot; alt=&quot;Powder d&apos;Arcane avec un regard triste et perdu&quot;&gt;
+    &lt;img class=&quot;imagereal&quot; src=&quot;./Media2/Pictures2/fanart/GR-honors-Jinx-tribute.jpg&quot; alt=&quot;Hommage à Jinx par GR&quot;&gt;
+    &lt;img class=&quot;imagereal&quot; src=&quot;./Media2/Pictures2/fanart/I-love-Arcane-artstyle-so-much!-Jinx-et-son-père-adoptif.jpg&quot; alt=&quot;Jinx et son père adoptif dans le style artistique d&apos;Arcane&quot;&gt;
+    &lt;img class=&quot;imagereal&quot; src=&quot;./Media2/Pictures2/fanart/Jinx-Arcane-dans-la-brume-de-dos-s-en-allant-combattre.jpg&quot; alt=&quot;Jinx d&apos;Arcane dans la brume, de dos, se préparant à combattre&quot;&gt;
+    
+    &lt;video class=&quot;videofanart&quot; controls loop autoplay muted&gt;
+        &lt;source src=&quot;./Media2/Video2/jinx-cosplay-fille-se-transformant-en-Jinx.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        Votre navigateur ne prend pas en charge ce format de vidéo.
+    &lt;/video&gt;
+
+    &lt;img class=&quot;imagereal&quot; src=&quot;./Media2/Pictures2/fanart/Jinx-triste-en-larme-mais-le-regard-fou-de-determination-de-vengeance-et-de-colère.jpg&quot; alt=&quot;Jinx triste en larmes mais avec un regard fou de détermination, de vengeance, et de colère&quot;&gt;
+    &lt;img class=&quot;imagereal&quot; src=&quot;./Media2/Pictures2/fanart/Jinx-version-league-of-legends.jpg&quot; alt=&quot;Version League of Legends de Jinx&quot;&gt;
+    &lt;img class=&quot;imagereal&quot; src=&quot;./Media2/Pictures2/fanart/Jinx&amp;Yasuo-Chengwei-Pan-le-flingue-en-l&apos;air.jpg&quot; alt=&quot;Jinx, par Chengwei Pan, avec un flingue en l&apos;air&quot;&gt;
+    &lt;img class=&quot;imagereal&quot; src=&quot;./Media2/Pictures2/fanart/Jinx-Fernanda-Suarez-entourée-de-ses-tags-de-singes-hurleurs.jpg&quot; alt=&quot;Jinx, par Fernanda Suarez, entourée de ses tags de singes hurleurs&quot;&gt;
+&lt;/div&gt;       
+</code>
+                            </pre>
+                            <span class="text"><strong>Structure HTML :</strong> div, img, video, source</span>
+                                <pre class="precode">
+<code class="code">
+.flexpics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-around;
+    overflow: hidden;
+    background-image: url(./Media2/Video2/fond-fanart.gif);
+}
+.videofanart {
+    height: 400px;
+    border-radius: 5px;
+    border: 10px solid black;
+    margin: 5px;
+}
+.imagereal {
+    height: 400px;
+    border-radius: 5px;
+    margin: 5px;
+    font-family: "Quiscksandbold";
+    font-size: 14px;
+    border: 10px solid;
+    }
+@media only screen and (min-width: 671px) and (max-width: 1000px){
+    .imagereal {
+    height: 350px;
+    }
+    .videofanart {
+    height: 350px;
+    }  
+}  
+</code>
+                                </pre>
+                                <span class="text"><strong>Stylisation CSS :</strong> flex-direction, flex-wrap, justify-content, overflow, height, border-radius, border</span>
+                        </div>                  
+                        <h4 class="subsubtitle">Galerie de Fanart : </h4>
+                        <p class="text">Un élément clé de ma contribution a été la création d'une galerie multimédia mettant en avant des images et vidéos 
+                            saisissantes de Jinx en action. J'ai opté pour une mise en page en grille avec CSS afin d'assurer une présentation organisée et 
+                            esthétique des médias.<br> 
+                            Cela enrichit l'expérience immersive des fans, leur permettant d'interagir avec le personnage de Jinx à travers divers contenus multimédias.
+                            <br>
+                        </p>
+                    </div>
+                    <div class="screenshotcard">
+                        <div class="codetext">
+                            <pre class="precode">
+<code class="code">
+&lt;!-- À Lire--&gt;
+&lt;form class=&quot;underunicorn&quot; action=&quot;https://universe.leagueoflegends.com/fr_FR/story/jinx-color-story/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+    &lt;input class=&quot;buttonsubmit&quot; aria-label=&quot;Je lis la suite&quot; type=&quot;submit&quot; value=&quot;JE LIS LA SUITE&quot; rel=&quot;noopener noreferrer&quot;&gt;
+&lt;/form&gt;
+
+&lt;!-- À Jouer --&gt;
+&lt;div class=&quot;loltext&quot;&gt;
+    &lt;form class=&quot;underlolmedia&quot; action=&quot;https://authenticate.riotgames.com/?&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+        &lt;span class=&quot;avatar&quot;&gt;JE VEUX JOUER&lt;br&gt;EN LIGNE&lt;/span&gt;
+        &lt;button class=&quot;buttonsubmit&quot; aria-label=&quot;Je m&apos;inscris, je me connecte&quot; type=&quot;submit&quot; rel=&quot;noopener noreferrer&quot;&gt;JE M&apos;INSCRIS&lt;br&gt;JE ME CONNECTE&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;form class=&quot;underlolmedia&quot; action=&quot;https://www.leagueoflegends.com/fr-fr/news/riot-games/hello-riot-mobile-farewell-league/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+        &lt;span class=&quot;avatar&quot;&gt;JE VEUX JOUER&lt;br&gt;SUR MOBILE&lt;/span&gt;
+        &lt;button class=&quot;buttonsubmit&quot; aria-label=&quot;Je télécharge l&apos;application&quot; type=&quot;submit&quot; rel=&quot;noopener noreferrer&quot;&gt;JE TELECHARGE&lt;br&gt;L&apos;APPLI&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+
+&lt;!-- Réseaux Sociaux --&gt;
+&lt;div class=&quot;socialmedia&quot;&gt;
+    &lt;a class=&quot;smicon&quot; href=&quot;#&quot; target=&quot;_blank&quot; aria-label=&quot;Lien vers le compte Facebook de Jinx&quot;&gt;&lt;img class=&quot;facebook&quot; src=&quot;./Media2/Icone2/facebook-pink.png&quot; alt=&quot;Facebook&quot;&gt;&lt;/a&gt;
+    &lt;a class=&quot;smicon&quot; href=&quot;#&quot; target=&quot;_blank&quot; aria-label=&quot;Lien vers le compte Instagram de Jinx&quot;&gt;&lt;img class=&quot;insta&quot; src=&quot;./Media2/Icone2/instagram-pink.png&quot; alt=&quot;Instagram&quot;&gt;&lt;/a&gt;
+    &lt;a class=&quot;smicon&quot; href=&quot;#&quot; target=&quot;_blank&quot; aria-label=&quot;Lien vers le compte Twitter X de Jinx&quot;&gt;&lt;img class=&quot;x&quot; src=&quot;./Media2/Icone2/twitterx-pink.png&quot;  alt=&quot;X&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+</code>
+                            </pre>
+                            <span class="text"><strong>Structure HTML :</strong> div, form, input, button, icon  </span>
+                            <div class="codetext">
+                                <pre class="precode">
+<code class="code">
+
+/* To play and Read */
+.underunicorn, .underlolmedia {
+    font-family: &quot;QuicksandBold&quot;;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 0px;
+    color: #e7ebf2;
+    text-align: center;
+    background-color: #402d89;
+    height: fit-content;
+}
+.underunicorn {
+    text-transform: uppercase;
+}
+
+/* Social Media */
+.smicon {
+    color: #fb3eb9;
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+    font-family: &quot;QuicksandBold&quot;;
+    font-size: 14px;
+}
+@media only screen and (max-width: 535px){
+    .smicon {
+        margin: 0px;
+        padding: 5px;
+    }  
+}
+</code>
+                                </pre>
+                                <span class="text"><strong>Stylisation CSS :</strong> text-transform, text-decoration, background-color, text-align</span>
+                            </div>
+                        </div>
+                        <h4 class="subsubtitle">Liens externes et Réseaux Sociaux :</h4>
+                        <p class="text">J'ai incorporé des liens vers les profils de réseaux sociaux de Jinx en utilisant des balises a, 
+                            incitant les fans à se connecter et à suivre Jinx sur différentes plateformes, mais aussi des liens externes. 
+                            Cela favorise non seulement un sentiment de communauté, mais dirige également le trafic vers les sites de 
+                            fans associés (pour jouer, lire, créer un avatar et acheter des goodies), ce qui améliore le référencement, 
+                            le trafic et l'engagement.
+                        </p>
+                    </div>
+                </div>
+                <div class="pagepart4">
+                    <div class="screenshotcard">
+                        <div class="codetext">
+                            <pre class="precode">
+<code class="code">
+&lt;div class=&quot;startpage&quot;&gt;
+    &lt;section class=&quot;text&quot;&gt;
+        &lt;h3 class=&quot;Riotgame&quot;&gt;Riot Games&lt;/h3&gt;
+        &lt;p class=&quot;firsttext1&quot;&gt;
+                C&apos;est un développeur et éditeur de jeux vidéo fondé en 2006, 
+                reconnu mondialement pour son titre phare, League of Legends. Ce jeu, lancé en 2009, 
+                a révolutionné le genre du MOBA ...
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;div class=&quot;riotlogo&quot;&gt;
+        &lt;img class=&quot;Rlogo&quot; src=&quot;./Media2/Pictures2/riot-game-logo.png&quot; alt=&quot;Le logo de Riot Games&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;section class=&quot;playloltext&quot;&gt;
+        &lt;img class=&quot;joueavecjinx&quot; src=&quot;./Media2/Video2/joue-avec-jinx.gif&quot; alt=&quot; courte animation montrant Jinx en action&quot;&gt;
+        &lt;h3 class=&quot;Riotgame&quot;&gt;Jouer à League Of Legends &lt;/h3&gt; 
+        &lt;p class=&quot;firsttext1&quot;&gt;
+            League of Legends est un jeu de stratégie en équipe où deux équipes de cinq champions s&apos;affrontent pour 
+            détruire le Nexus ennemi, le cœur de la base adverse. Les joueurs choisissent parmi plus de 140 champions ...
+        &lt;/p&gt;
+    &lt;/section&gt;
+</code>
+                            </pre>
+                            <span class="text"><strong>Structure HTML :</strong> div, section</span>
+                                <pre class="precode">
+<code class="code">
+.startpage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(./Media2/Video2/Boom-jinx-was-here.gif);
+    background-repeat: repeat;
+    background-position: bottom;
+}
+.riotlogo {
+    align-content: center;
+}
+.playloltext {
+font-size: 1rem;
+width: auto;
+margin: 10px;
+}
+.playloltext {
+    width: 90%;
+    order: 3;
+}
+@media only screen and (max-width: 1175px) {
+    .riotlogo {
+        order:1;
+    }
+    .text {
+        order: 2;
+        width: 90%;
+    }
+    .lolpic {
+        width: auto;
+        text-align: center;
+        order:1;
+    }
+    .startpage {
+        justify-content: right;
+    }
+}
+@media only screen and (max-width: 649px) {
+    .startpage {
+        justify-content: center;
+    }
+}
+</code>
+                                </pre>
+                                <span class="text"><strong>Stylisation CSS :</strong> display, flex-direction, flex-wrap, order, @media only screen</span>
+                        </div>                  
+                        <h4 class="subsubtitle">Conception Responsive :</h4>
+                        <p class="text">Le site de fans est optimisé pour s'afficher correctement sur tous les appareils. En utilisant des techniques telles 
+                            que les grilles fluides et les requêtes de médias, la conception réactive permet au contenu de s'ajuster harmonieusement aux 
+                            différentes tailles d'écran. Les flexboxes sont particulièrement utiles dans ce contexte, car ils facilitent la création de mises 
+                            en page flexibles qui s'adaptent dynamiquement. Ils permettent un alignement et une distribution aisés de l'espace entre les 
+                            éléments sans nécessiter de règles CSS complexes.
+                            <br>
+                        </p>
+                    </div>
+                    <div class="screenshotcard">
+                        <div class="codetext">
+                            <pre class="precode">
+<code class="code">
+&lt;h2 id=&quot;league&quot; class=&quot;leagueoflegend&quot;&gt;&lt;img class=&quot;monkey&quot; src=&quot;./Media2/Pictures2/monkey-bomb-transparent-blanc.png&quot; alt=&quot;tag singe de Jinx&quot;&gt; #League-of-Legends&lt;/h2&gt;
+&lt;div class=&quot;blackaudio&quot;&gt;
+    &lt;span class=&quot;audiotitle&quot;&gt;Blood Sweat &amp; Tears - Sheryl Lee Ralph&lt;/span&gt;
+    &lt;audio controls&gt;
+        &lt;source src=&quot;./Media2/Audio2/Blood-Sweat&amp;Tears-Sheryl-Lee-Ralph.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+        Votre navigateur ne prend pas en charge ce format audio. Voilà un 
+        &lt;a href=&quot;https://www.youtube.com/watch?v=rhTZTy1rZhw&amp;list=PLJP5_qSxMbkJvmDlvP8v_tZ5Lc8Fzginj&amp;index=17&quot;&gt;lien vers l&apos;audio&lt;/a&gt; sur YouTube à la place.
+    &lt;/audio&gt;
+&lt;/div&gt;
+&lt;div class=&quot;startpage&quot;&gt;
+    &lt;section class=&quot;text&quot;&gt;
+        &lt;h3 class=&quot;Riotgame&quot;&gt;Riot Games&lt;/h3&gt;
+
+&lt;form class=&quot;underunicorn&quot; action=&quot;https://universe.leagueoflegends.com/fr_FR/story/jinx-color-story/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+    &lt;input class=&quot;buttonsubmit&quot; aria-label=&quot;Je lis la suite&quot; type=&quot;submit&quot; value=&quot;JE LIS LA SUITE&quot; rel=&quot;noopener noreferrer&quot;&gt;
+&lt;/form&gt;
+</code>
+                            </pre>
+                            <span class="text"><strong>Structure HTML :</strong> section, H, aria-label, alt </span>
+                            <div class="codetext">
+                                <pre class="precode">
+<code class="code">
+.firsttext {
+    font-family: &quot;QuicksandBold&quot;;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #e7ebf2;
+    background-color: #402d89;
+}
+.LOF, .ARC {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+</code>
+                                </pre>
+                                <span class="text"><strong>Stylisation CSS :</strong> font-family, font-size, color, background-color, flex-direction, flex-wrap, justify-content</span>
+                            </div>
+                        </div>
+                        <h4 class="subsubtitle">Accessibilité :</h4>
+                        <p class="text">Accès équitable à l'information : cela implique l'adoption des meilleures pratiques, comme l'utilisation de 
+                            HTML sémantique qui aide les technologies d'assistance (lecteurs d'écran) et un contraste de couleur adéquat.<br> 
+                            L'intégration de balises telles que les étiquettes, les attributs alt et aria-label améliore la lisibilité et 
+                            l'accessibilité. La conception responsive est essentielle, car elle permet au contenu de s'ajuster à différentes 
+                            tailles et orientations, facilitant ainsi l'interaction des utilisateurs avec celui-ci.<br> 
+                            De plus, Flexbox permet de créer des mises en page flexibles qui réorganisent les éléments pour une meilleure 
+                            lisibilité et navigation.
+                        </p>
+                    </div>
+                </div>
+                <div class="pagepart">
+                    <section class="card">
+                        <h3 class="subtitle">Bilan de l'apprentissage</h3>
+                        <p class="text">Le Projet de Site de Fans a consisté en la création d'une plateforme web collaborative mettant en avant 
+                            trois célébrités distinctes, avec un accent sur la réalisation d'un site engageant et visuellement attractif. 
+                            Chaque membre de l'équipe a travaillé sur des pages individuelles tout en maintenant une cohérence de design. 
+                            Mes contributions spécifiques se sont concentrées sur les fichiers fansite2.html et fansite2.css. 
+                            Ce projet a été une occasion précieuse d'améliorer mes compétences en développement web front-end, en mettant l'accent sur 
+                            le HTML sémantique et le CSS pour un design moderne et réactif.<br>
+                            J'ai intégré divers composants, tels qu'une mise en page structurée, une intégration multimédia et un formulaire 
+                            d'abonnement à la newsletter, en utilisant des éléments de formulaire HTML et CSS Flexbox pour le style. 
+                            Au cours de ce projet, j'ai pris conscience de l'importance de créer une expérience accessible et conviviale en appliquant 
+                            des techniques de design réactif, en optimisant la gestion des médias, et en veillant à un contraste de couleur adéquat 
+                            ainsi qu'à un balisage sémantique pour une meilleure lisibilité et accessibilité.<br> 
+                            Cette expérience a considérablement enrichi ma compréhension du développement web et m'a préparé à relever de futurs défis 
+                            dans la création d'applications web interactives et évolutives.
+                        </p>
+                    </section>
+                </div>
+                <div class="pagepart">
+                    <section class="card">
+                        <h3 class="subtitle">Améliorations Possibles</h3>
+                        <p class="text">Pour améliorer la fonctionnalité et l'expérience utilisateur du Site de Fans, plusieurs améliorations peuvent être envisagées.
+                        </p>
+                        <ul class="listtext">
+                            <li class="listtext"><strong>Optimisation des Médias et Minimisation du CSS : </strong>Améliorer les performances du site est une priorité essentielle, 
+                                et cela peut être accompli en optimisant la gestion des médias et en réduisant la taille des fichiers CSS. 
+                                La compression des images, ainsi que l'adoption de formats modernes tels que WebP, permet de diminuer considérablement les temps de chargement 
+                                sans sacrifier la qualité visuelle.<br> 
+                                De plus, l'implémentation du chargement différé pour les images et vidéos garantit que seul le contenu visible est chargé au départ, 
+                                ce qui contribue à un chargement de page plus rapide.<br> 
+                                En réduisant le nombre de feuilles de style, on minimise également les requêtes HTTP, ce qui entraîne un rendu de page plus rapide et 
+                                offre une expérience utilisateur plus fluide et réactive.
+                            </li>
+                            <li class="listtext"><strong>Développement Backend pour des Fonctionnalités Dynamiques : </strong>
+                                Pour améliorer les fonctionnalités du Site de Fans, l'intégration du développement backend est essentielle. 
+                                Cela permettra d'introduire des fonctionnalités dynamiques telles que la création de comptes utilisateurs, un 
+                                contenu personnalisé et des abonnements sécurisés à la newsletter. En particulier, rendre la barre de recherche 
+                                opérationnelle facilitera aux utilisateurs la recherche de contenu spécifique.<br> 
+                                Par ailleurs, le formulaire d'abonnement à la newsletter sera relié à un système backend pour assurer une gestion 
+                                sécurisée des données des utilisateurs.<br>
+                                De plus, le développement d'une section de commentaires fonctionnelle encouragera les utilisateurs à interagir 
+                                et à partager leurs réflexions sur divers sujets, renforçant ainsi l'engagement au sein de la communauté.<br> 
+                                Enfin, l'implémentation d'un formulaire de contact simplifiera la communication avec les administrateurs du site, 
+                                garantissant une gestion efficace des demandes et des retours.
+                            </li>
+                        </ul>                  
+                    </section>
+                </div>
+                <div id="contact" class="pagepart4">
+                    <section class="card">
+                        <h2 class="title">RÉSEAUX SOCIAUX</h2>
+                        <p class="text">Jetez un œil à mes profils GitHub et LinkedIn pour voir mes derniers projets et mon parcours professionnel ! 
+                            Si vous êtes curieux de mes compétences en codage ou si vous voulez en savoir plus sur mon expérience, 
+                            ces plateformes présentent mon travail. 
+                        <br>Connectons-nous et collaborons !
+                        </p>
+                        <div class="indextext" >
+                            <ul class="sociallinks">
+                                <li class="language">Lien vers mon :<a class ="linksocial" href="https://github.com/christine-chemali" target="_blank" aria-label="Lien vers le compte github de Christine Chemali">Github</a></li>
+                                <li class="language">Lien vers mon :<a class ="linksocial" href="https://www.linkedin.com/in/christine-chemali-4479b3327/" target="_blank" aria-label="Lien vers le compte linkedin de Christine Chemali">Linkedin</a></li>   
+                            </ul>
+                        </div>
+                    </section>
+                                    <section class="card">
+                    <h2 class="title">Email</h2>
+                    <p class="text">
+                        Je suis toujours disponible pour discuter de nouvelles opportunités, de collaborations, 
+                        ou pour répondre à toutes vos questions.<br> 
+                        N'hésitez pas à me joindre.<br><br> 
+                        J'ai hâte d'échanger avec vous !</p>
+                    <div class="indextext">
+                        <ul>    
+                            <li class="linkemail"><a class="linksocial" href="mailto:christine.chemali@laplateforme.io" target="_blank" aria-label="envoyer un email à Christine Chemali">Envoyez-moi un email</a></li><br>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- pied de page --> 
+        <footer class="footer">
+            <div class="footerdiv">
+                <div class="socialmedia">
+                    <a class="smicon" href="https://github.com/christine-chemali" target="_blank" aria-label="Lien vers le compte github de Christine Chemali"><img class="icon" src="./Media/icons/github.png" alt="Github"></a>
+                    <a class="smicon" href="https://www.linkedin.com/in/christine-chemali" target="_blank" aria-label="Lien vers le compte linkedin de Christine Chemali"><img class="icon" src="./Media/icons/linkedin.png" alt="Linkedin"></a>
+                    <a class="smicon" href="mailto:christine.chemali@laplateforme.io" target="_blank" aria-label="envoyer un email à Christine Chemali"><img class="icon" src="./Media/icons/mail.png" alt="Envoyer un email à Christine Chemali"></a>
+                </div>
+            </div>
+            <p class="allrights">© 2024 Christine Chemali Portfolio. Tous droits réservés.</p>
+        </footer>
     </body>
 </html>
