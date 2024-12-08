@@ -174,13 +174,12 @@ html {
     list-style-type: upper-roman;
 }
 .listtext {
-    margin: 10px;
+    margin: 5px;
     font-family: var(--font-text-regular);
     color: var(--main-text-color);
     font-size: 1rem;
 }
 .project {
-    list-style-position: inside;
     color: var(--link-text-color);
     list-style-type: lower-roman;
     padding: 2px;
