@@ -162,6 +162,8 @@ html {
 .indextext {
     font-family: var(--font-text-regular);
     color: var(--main-text-color);
+    margin-left: 20px;
+    font-size: 1rem;
 }
 .list {
     font-family: var(--font-text-regular);
@@ -175,6 +177,7 @@ html {
     margin: 10px;
     font-family: var(--font-text-regular);
     color: var(--main-text-color);
+    font-size: 1rem;
 }
 .project {
     list-style-position: inside;
@@ -346,10 +349,10 @@ a {
 }
 .headermenu {
     padding-top: 0px;
-}
+}/*
 .pagepart4{
     flex-direction: column;
-}
+}*/
 }
 @media only screen and (min-width:410px) and (max-width: 980px){
     .title{
