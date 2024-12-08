@@ -221,6 +221,7 @@ a {
     font-size: 2.5rem;
     margin: 0px;
     line-height: 2.7rem;
+    word-break: break-word;
 }
 .subsubtitle {
     font-family: var(--font-title-regular);
@@ -339,6 +340,7 @@ a {
     width: 95%;
     margin-right: auto;
     margin-left: auto;
+    min-width: 46.7%;
 }
 .mainpage, .pagepart4 {
     flex-wrap: wrap;
@@ -381,4 +383,29 @@ a {
     #portfolio {
         max-width: 60%;
     }          
+}
+@media only screen and (max-width:300px){
+.mainpage, .pagepart, .pagepart4 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.language {
+    padding: 0px;
+    margin-bottom: 10px;
+    }
+.indextext {
+    margin-left: 0px;
+    }
+.project:hover, .linksocial:hover {
+    margin: 0px;
+    padding: 0px;
+    }
+    .project {
+    padding: 0px;
+    margin: 0px;
+    }
+.listtext {
+    margin: 0px;
+    padding-bottom: 10px;
+    }
 }
