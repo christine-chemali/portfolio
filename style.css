@@ -162,7 +162,7 @@ html {
 .indextext {
     font-family: var(--font-text-regular);
     color: var(--main-text-color);
-    margin-left: 20px;
+    margin-left: 5px;
     font-size: 1rem;
 }
 .list {
